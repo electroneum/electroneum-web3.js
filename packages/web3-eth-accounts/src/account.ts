@@ -65,10 +65,12 @@ import { TransactionFactory } from './tx/transactionFactory.js';
 import type {
 	SignatureObject,
 	SignTransactionResult,
+	SignPriorityETNIP1TransactionResult,
 	TypedTransaction,
 	Web3Account,
 	SignResult,
 } from './types.js';
+import { PriorityETNIP1Transaction } from './tx/etnip1Transaction.js';
 
 /**
  * Get the private key Uint8Array after the validation
@@ -273,6 +275,53 @@ export const signTransaction = async (
 		v: `0x${signedTx.v.toString(16)}`,
 		r: `0x${signedTx.r.toString(16).padStart(64, '0')}`,
 		s: `0x${signedTx.s.toString(16).padStart(64, '0')}`,
+		rawTransaction: rawTx,
+		transactionHash: bytesToHex(txHash),
+	};
+};
+
+export const signPriorityTransaction = async (
+	transaction: TypedTransaction,
+	privateKey: HexString,
+	priorityPrivateKey: HexString,
+	// To make it compatible with rest of the API, have to keep it async
+	// eslint-disable-next-line @typescript-eslint/require-await
+): Promise<SignPriorityETNIP1TransactionResult> => {
+	const signedTx = transaction.sign(
+		hexToBytes(privateKey),
+		hexToBytes(priorityPrivateKey),
+	) as PriorityETNIP1Transaction;
+	if (
+		isNullish(signedTx.v) ||
+		isNullish(signedTx.r) ||
+		isNullish(signedTx.s) ||
+		isNullish(signedTx.pV) ||
+		isNullish(signedTx.pR) ||
+		isNullish(signedTx.pS)
+	)
+		throw new TransactionSigningError('Signer Error');
+
+	const validationErrors = signedTx.validate(true);
+
+	if (validationErrors.length > 0) {
+		let errorString = 'Signer Error ';
+		for (const validationError of validationErrors) {
+			errorString += `${errorString} ${validationError}.`;
+		}
+		throw new TransactionSigningError(errorString);
+	}
+
+	const rawTx = bytesToHex(signedTx?.serialize());
+	const txHash = sha3Raw(rawTx); // using keccak in web3-utils.sha3Raw instead of SHA3 (NIST Standard) as both are different
+
+	return {
+		messageHash: bytesToHex(signedTx.getMessageToSign(true)),
+		v: `0x${signedTx.v?.toString(16)}`,
+		r: `0x${signedTx.r?.toString(16).padStart(64, '0')}`,
+		s: `0x${signedTx.s?.toString(16).padStart(64, '0')}`,
+		priorityV: `0x${signedTx.pV?.toString(16)}`,
+		priorityR: `0x${signedTx.pR?.toString(16).padStart(64, '0')}`,
+		priorityS: `0x${signedTx.pS?.toString(16).padStart(64, '0')}`,
 		rawTransaction: rawTx,
 		transactionHash: bytesToHex(txHash),
 	};

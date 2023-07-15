@@ -18,12 +18,14 @@ import { Numbers } from 'web3-types';
 import { toUint8Array, uint8ArrayToBigInt } from '../common/utils.js';
 import { FeeMarketEIP1559Transaction } from './eip1559Transaction.js';
 import { AccessListEIP2930Transaction } from './eip2930Transaction.js';
+import { PriorityETNIP1Transaction } from './etnip1Transaction.js';
 import { Transaction } from './legacyTransaction.js';
 import type { TypedTransaction } from '../types.js';
 
 import type {
 	AccessListEIP2930TxData,
 	FeeMarketEIP1559TxData,
+	PriorityETNIP1TxData,
 	TxData,
 	TxOptions,
 } from './types.js';
@@ -82,11 +84,17 @@ export class TransactionFactory {
 				txOptions,
 			);
 		}
+		if (txType === 64) {
+			return PriorityETNIP1Transaction.fromTxData(
+				// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+				<PriorityETNIP1TxData>txData,
+				txOptions,
+			);
+		}
 		const ExtraTransaction = extraTxTypes.get(txType);
 		if (ExtraTransaction?.fromTxData) {
 			return ExtraTransaction.fromTxData(txData, txOptions) as TypedTransaction;
 		}
-
 		throw new Error(`Tx instantiation with type ${txType} not supported`);
 	}
 
@@ -107,6 +115,8 @@ export class TransactionFactory {
 					return AccessListEIP2930Transaction.fromSerializedTx(data, txOptions);
 				case 2:
 					return FeeMarketEIP1559Transaction.fromSerializedTx(data, txOptions);
+				case 64:
+					return PriorityETNIP1Transaction.fromSerializedTx(data, txOptions);
 				default: {
 					const ExtraTransaction = extraTxTypes.get(Number(data[0]));
 					if (ExtraTransaction?.fromSerializedTx) {
@@ -115,7 +125,6 @@ export class TransactionFactory {
 							txOptions,
 						) as TypedTransaction;
 					}
-
 					throw new Error(`TypedTransaction with ID ${data[0]} unknown`);
 				}
 			}

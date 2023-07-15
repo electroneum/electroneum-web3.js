@@ -28,6 +28,7 @@ import {
 	recover,
 	recoverTransaction,
 	signTransaction,
+	signPriorityTransaction,
 	sign,
 	Wallet,
 } from 'web3-eth-accounts';
@@ -46,6 +47,23 @@ export const initAccountsForContext = (context: Web3Context<EthExecutionAPI>) =>
 		const privateKeyBytes = format({ format: 'bytes' }, privateKey, ETH_DATA_FORMAT);
 
 		return signTransaction(tx, privateKeyBytes);
+	};
+
+	const signPriorityTransactionWithContext = async (
+		transaction: Transaction,
+		privateKey: Bytes,
+		priorityPrivateKey: Bytes,
+	) => {
+		const tx = await prepareTransactionForSigning(transaction, context);
+
+		const privateKeyBytes = format({ format: 'bytes' }, privateKey, ETH_DATA_FORMAT);
+		const priorityPrivateKeyBytes = format(
+			{ format: 'bytes' },
+			priorityPrivateKey,
+			ETH_DATA_FORMAT,
+		);
+
+		return signPriorityTransaction(tx, privateKeyBytes, priorityPrivateKeyBytes);
 	};
 
 	const privateKeyToAccountWithContext = (privateKey: Uint8Array | string) => {
@@ -90,6 +108,7 @@ export const initAccountsForContext = (context: Web3Context<EthExecutionAPI>) =>
 
 	return {
 		signTransaction: signTransactionWithContext,
+		signPriorityTransaction: signPriorityTransactionWithContext,
 		create: createWithContext,
 		privateKeyToAccount: privateKeyToAccountWithContext,
 		decrypt: decryptWithContext,

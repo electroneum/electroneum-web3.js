@@ -17,7 +17,12 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 
 import { Web3BaseWalletAccount, HexString } from 'web3-types';
 import { FeeMarketEIP1559TxData, AccessListEIP2930TxData, TxData } from './tx/types.js';
-import { AccessListEIP2930Transaction, FeeMarketEIP1559Transaction, Transaction } from './tx';
+import {
+	AccessListEIP2930Transaction,
+	FeeMarketEIP1559Transaction,
+	Transaction,
+	PriorityETNIP1Transaction,
+} from './tx';
 
 export type SignatureObject = {
 	messageHash: string;
@@ -31,11 +36,21 @@ export type SignTransactionResult = SignatureObject & {
 	transactionHash: string;
 };
 
+export type SignPriorityETNIP1TransactionResult = SignatureObject & {
+	priorityR: string;
+	priorityS: string;
+	priorityV: string;
+
+	rawTransaction: string;
+	transactionHash: string;
+};
+
 export type SignTransactionFunction = (
 	transaction:
 		| TxData
 		| AccessListEIP2930TxData
 		| FeeMarketEIP1559TxData
+		| PriorityETNIP1Transaction
 		| Record<string, unknown>,
 ) => SignTransactionResult;
 
@@ -91,4 +106,5 @@ export interface WebStorage {
 export type TypedTransaction =
 	| Transaction
 	| AccessListEIP2930Transaction
-	| FeeMarketEIP1559Transaction;
+	| FeeMarketEIP1559Transaction
+	| PriorityETNIP1Transaction;

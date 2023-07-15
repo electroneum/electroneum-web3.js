@@ -219,6 +219,26 @@ export interface FeeMarketEIP1559TxData extends AccessListEIP2930TxData {
 }
 
 /**
+ * {@link PriorityTransaction} data.
+ */
+export interface PriorityETNIP1TxData extends FeeMarketEIP1559TxData {
+	/**
+	 * EC recovery ID.
+	 */
+	pV?: Numbers | Uint8Array;
+
+	/**
+	 * EC signature parameter.
+	 */
+	pR?: Numbers | Uint8Array;
+
+	/**
+	 * EC signature parameter.
+	 */
+	pS?: Numbers | Uint8Array;
+}
+
+/**
  * Uint8Array values array for a legacy {@link Transaction}
  */
 export type TxValuesArray = Uint8Array[];
@@ -258,6 +278,27 @@ export type FeeMarketEIP1559ValuesArray = [
 	Uint8Array?,
 ];
 
+/**
+ * Uint8Array values array for a {@link PriorityETNIP1Transaction}
+ */
+export type PriorityETNIP1ValuesArray = [
+	Uint8Array,
+	Uint8Array,
+	Uint8Array,
+	Uint8Array,
+	Uint8Array,
+	Uint8Array,
+	Uint8Array,
+	Uint8Array,
+	AccessListUint8Array,
+	Uint8Array?,
+	Uint8Array?,
+	Uint8Array?,
+	Uint8Array?,
+	Uint8Array?,
+	Uint8Array?,
+];
+
 type JsonAccessListItem = { address: string; storageKeys: string[] };
 
 /**
@@ -285,4 +326,7 @@ export interface JsonTx {
 	maxFeePerGas?: string;
 	maxFeePerDataGas?: string;
 	versionedHashes?: string[];
+	pV?: string;
+	pR?: string;
+	pS?: string;
 }

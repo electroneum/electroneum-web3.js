@@ -26,6 +26,8 @@ import type {
 	AccessListEIP2930ValuesArray,
 	FeeMarketEIP1559TxData,
 	FeeMarketEIP1559ValuesArray,
+	PriorityETNIP1TxData,
+	PriorityETNIP1ValuesArray,
 	JsonTx,
 	TxData,
 	TxOptions,
@@ -98,7 +100,7 @@ export abstract class BaseTransaction<TransactionObject> {
 	protected DEFAULT_HARDFORK: string | Hardfork = Hardfork.Merge;
 
 	public constructor(
-		txData: TxData | AccessListEIP2930TxData | FeeMarketEIP1559TxData,
+		txData: TxData | AccessListEIP2930TxData | FeeMarketEIP1559TxData | PriorityETNIP1TxData,
 		opts: TxOptions,
 	) {
 		const { nonce, gasLimit, to, value, data, v, r, s, type } = txData;
@@ -273,7 +275,8 @@ export abstract class BaseTransaction<TransactionObject> {
 	public abstract raw():
 		| TxValuesArray
 		| AccessListEIP2930ValuesArray
-		| FeeMarketEIP1559ValuesArray;
+		| FeeMarketEIP1559ValuesArray
+		| PriorityETNIP1ValuesArray;
 
 	/**
 	 * Returns the encoding of the transaction.
