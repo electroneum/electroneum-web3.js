@@ -19,6 +19,7 @@ import {
 	AccessListEIP2930Transaction,
 	AccessListUint8ArrayItem,
 	FeeMarketEIP1559Transaction,
+	PriorityETNIP1Transaction,
 } from '../../../src';
 import { Chain, Common, Hardfork, uint8ArrayToBigInt } from '../../../src/common';
 import { Address } from '../../../src/tx/address';
@@ -52,6 +53,11 @@ const txTypes = [
 		class: FeeMarketEIP1559Transaction,
 		name: 'FeeMarketEIP1559Transaction',
 		type: 2,
+	},
+	{
+		class: PriorityETNIP1Transaction,
+		name: 'PriorityETNIP1Transaction',
+		type: 64,
 	},
 ];
 
@@ -272,14 +278,14 @@ describe('[AccessListEIP2930Transaction / FeeMarketEIP1559Transaction] -> EIP-29
 				},
 				{ common },
 			);
-			let signed = tx.sign(pKey);
+			let signed = tx.type == 64 ? (tx as PriorityETNIP1Transaction).sign(pKey, pKey) : tx.sign(pKey);
 			const signedAddress = signed.getSenderAddress();
 			expect(uint8ArrayEquals(signedAddress.buf, address)).toBeTruthy();
 			// expect(signedAddress).toEqual(Address.publicToAddress(Buffer.from(address)));
 			signed.verifySignature(); // If this throws, test will not end.
 
 			tx = txType.class.fromTxData({}, { common });
-			signed = tx.sign(pKey);
+			signed = tx.type == 64 ? (tx as PriorityETNIP1Transaction).sign(pKey, pKey) : tx.sign(pKey);
 
 			expect(tx.accessList).toEqual([]);
 			expect(signed.accessList).toEqual([]);
@@ -297,7 +303,7 @@ describe('[AccessListEIP2930Transaction / FeeMarketEIP1559Transaction] -> EIP-29
 			expect(() => {
 				const high = SECP256K1_ORDER_DIV_2 + BigInt(1);
 				const _tx = txType.class.fromTxData({ s: high, r: 1, v: 1 }, { common });
-				const _signed = _tx.sign(pKey);
+				const _signed = _tx.type == 64 ? (_tx as PriorityETNIP1Transaction).sign(pKey, pKey) : _tx.sign(pKey);
 				_signed.getSenderPublicKey();
 			}).toThrow();
 		}

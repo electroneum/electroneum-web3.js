@@ -28,6 +28,7 @@ import {
 	recoverTransaction,
 	sign,
 	signTransaction,
+	signPriorityTransaction,
 } from '../../src';
 import { TransactionFactory } from '../../src/tx/transactionFactory';
 import {
@@ -38,6 +39,7 @@ import {
 	invalidPrivateKeyToAddressData,
 	signatureRecoverData,
 	transactionsTestData,
+	transactionsPriorityTestData,
 	validDecryptData,
 	validEncryptData,
 	validHashMessageData,
@@ -113,6 +115,44 @@ describe('accounts', () => {
 			const signedResult = await signTransaction(
 				// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 				TransactionFactory.fromTxData(txObj),
+				account.privateKey,
+			);
+			expect(signedResult).toBeDefined();
+
+			const address: Address = recoverTransaction(signedResult.rawTransaction);
+			expect(address).toEqual(account.address);
+		});
+	});
+
+	describe('Signing and Recovery of Priority Transaction', () => {
+		it.each(transactionsPriorityTestData)('sign priority transaction', async txData => {
+			const account = create();
+
+			const signedResult = await signPriorityTransaction(
+				// eslint-disable-next-line @typescript-eslint/no-unsafe-call
+				TransactionFactory.fromTxData(txData),
+				account.privateKey,
+				account.privateKey,
+			);
+			expect(signedResult).toBeDefined();
+			expect(signedResult.messageHash).toBeDefined();
+			expect(signedResult.rawTransaction).toBeDefined();
+			expect(signedResult.transactionHash).toBeDefined();
+			expect(signedResult.r).toBeDefined();
+			expect(signedResult.s).toBeDefined();
+			expect(signedResult.v).toBeDefined();
+			expect(signedResult.priorityR).toBeDefined();
+			expect(signedResult.priorityS).toBeDefined();
+			expect(signedResult.priorityV).toBeDefined();
+		});
+
+		it.each(transactionsPriorityTestData)('Recover priority transaction', async txData => {
+			const account = create();
+			const txObj = { ...txData, from: account.address };
+			const signedResult = await signPriorityTransaction(
+				// eslint-disable-next-line @typescript-eslint/no-unsafe-call
+				TransactionFactory.fromTxData(txObj),
+				account.privateKey,
 				account.privateKey,
 			);
 			expect(signedResult).toBeDefined();

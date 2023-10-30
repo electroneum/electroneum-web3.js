@@ -28,6 +28,7 @@ import {
 	recoverTransaction,
 	sign,
 	signTransaction,
+	signPriorityTransaction,
 	privateKeyToPublicKey,
 } from '../../src/account';
 import {
@@ -38,6 +39,7 @@ import {
 	invalidPrivateKeyToAddressData,
 	signatureRecoverData,
 	transactionsTestData,
+	transactionsPriorityTestData,
 	validDecryptData,
 	validEncryptData,
 	validHashMessageData,
@@ -126,6 +128,45 @@ describe('accounts', () => {
 				// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 				TransactionFactory.fromTxData(txObj),
 				account.privateKey,
+			);
+			expect(signedResult).toBeDefined();
+
+			const address: Address = recoverTransaction(signedResult.rawTransaction);
+			expect(address).toBeDefined();
+			expect(address).toEqual(account.address);
+		});
+	});
+
+	describe('Signing and Recovery of Priority Transaction', () => {
+		it.each(transactionsPriorityTestData)('sign priority transaction', async txData => {
+			const account = create();
+
+			const signedResult = await signPriorityTransaction(
+				// eslint-disable-next-line @typescript-eslint/no-unsafe-call
+				TransactionFactory.fromTxData(txData as unknown as TxData),
+				account.privateKey,
+				account.privateKey
+			);
+			expect(signedResult).toBeDefined();
+			expect(signedResult.messageHash).toBeDefined();
+			expect(signedResult.rawTransaction).toBeDefined();
+			expect(signedResult.transactionHash).toBeDefined();
+			expect(signedResult.r).toMatch(/0[xX][0-9a-fA-F]{64}/);
+			expect(signedResult.s).toMatch(/0[xX][0-9a-fA-F]{64}/);
+			expect(signedResult.v).toMatch(/0[xX][0-9a-fA-F]+/);
+			expect(signedResult.priorityR).toMatch(/0[xX][0-9a-fA-F]{64}/);
+			expect(signedResult.priorityS).toMatch(/0[xX][0-9a-fA-F]{64}/);
+			expect(signedResult.priorityV).toMatch(/0[xX][0-9a-fA-F]+/);
+		});
+
+		it.each(transactionsPriorityTestData)('Recover transaction', async txData => {
+			const account = create();
+			const txObj = { ...txData, from: account.address };
+			const signedResult = await signPriorityTransaction(
+				// eslint-disable-next-line @typescript-eslint/no-unsafe-call
+				TransactionFactory.fromTxData(txObj),
+				account.privateKey,
+				account.privateKey
 			);
 			expect(signedResult).toBeDefined();
 

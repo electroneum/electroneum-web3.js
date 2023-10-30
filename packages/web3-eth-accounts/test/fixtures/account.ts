@@ -28,6 +28,7 @@ import { CipherOptions, KeyStore, Bytes } from 'web3-types';
 import { hexToBytes } from 'web3-utils';
 import { AccessListEIP2930TxData, FeeMarketEIP1559TxData, TxData } from '../../src/tx/types';
 import { sign, signTransaction, encrypt } from '../../src/account';
+import { PriorityETNIP1TxData } from '../../lib/commonjs';
 
 export const validPrivateKeyToAddressData: [string, string][] = [
 	[
@@ -209,6 +210,23 @@ export const transactionsTestData: [TxData | AccessListEIP2930TxData | FeeMarket
 					],
 				},
 			],
+		},
+	],
+];
+
+export const transactionsPriorityTestData: [TxData | AccessListEIP2930TxData | FeeMarketEIP1559TxData | PriorityETNIP1TxData][] = [
+	[
+		// 'Priority Transaction'
+		{
+			type: 64,
+			to: '0xF0109fC8DF283027b6285cc889F5aA624EaC1F55',
+			maxPriorityFeePerGas: '0x3B9ACA00',
+			maxFeePerGas: '0xB2D05E00',
+			gasLimit: '0x6A4012',
+			value: '0x186A0',
+			data: '',
+			chainId: 1,
+			nonce: 0,
 		},
 	],
 ];

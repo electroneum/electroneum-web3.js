@@ -20,6 +20,7 @@ import { Chain, Common, Hardfork } from '../../../src/common';
 import {
 	AccessListEIP2930Transaction,
 	FeeMarketEIP1559Transaction,
+	PriorityETNIP1Transaction,
 	Transaction,
 	TransactionFactory,
 } from '../../../src';
@@ -46,6 +47,12 @@ const unsignedEIP1559Tx = FeeMarketEIP1559Transaction.fromTxData(
 );
 const signedEIP1559Tx = unsignedEIP1559Tx.sign(pKey);
 
+const unsignedETNIP1Tx = PriorityETNIP1Transaction.fromTxData(
+	{ chainId: BigInt(1) },
+	{ common },
+);
+const signedETNIP1Tx = unsignedETNIP1Tx.sign(pKey, pKey);
+
 const txTypes = [
 	{
 		class: Transaction,
@@ -70,6 +77,14 @@ const txTypes = [
 		signed: signedEIP1559Tx,
 		eip2718: true,
 		type: 2,
+	},
+	{
+		class: PriorityETNIP1Transaction,
+		name: 'PriorityETNIP1Transaction',
+		unsigned: unsignedETNIP1Tx,
+		signed: signedETNIP1Tx,
+		eip2718: true,
+		type: 64,
 	},
 ];
 

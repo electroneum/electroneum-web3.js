@@ -19,6 +19,7 @@ import {
 	AccessListEIP2930Transaction,
 	Capability,
 	FeeMarketEIP1559Transaction,
+	PriorityETNIP1Transaction,
 	Transaction,
 } from '../../../src';
 import { Chain, Common, Hardfork, toUint8Array, uint8ArrayToBigInt } from '../../../src/common';
@@ -27,6 +28,7 @@ import { MAX_INTEGER, MAX_UINT64, SECP256K1_ORDER, secp256k1 } from '../../../sr
 import type { BaseTransaction } from '../../../src/tx/baseTransaction';
 import eip1559Fixtures from '../../fixtures/json/eip1559txs.json';
 import eip2930Fixtures from '../../fixtures/json/eip2930txs.json';
+import etnip1Fixtures from '../../fixtures/json/etnin1txs.json';
 
 import legacyFixtures from '../../fixtures/json/txs.json';
 
@@ -57,6 +59,11 @@ describe('[BaseTransaction]', () => {
 	const eip1559Txs: BaseTransaction<FeeMarketEIP1559Transaction>[] = [];
 	for (const tx of eip1559Fixtures) {
 		eip1559Txs.push(FeeMarketEIP1559Transaction.fromTxData(tx.data, { common }));
+	}
+
+	const etnip1Txs: BaseTransaction<PriorityETNIP1Transaction>[] = [];
+	for (const tx of etnip1Fixtures) {
+		etnip1Txs.push(PriorityETNIP1Transaction.fromTxData(tx.data, { common }));
 	}
 
 	const zero = new Uint8Array(0);
@@ -93,6 +100,20 @@ describe('[BaseTransaction]', () => {
 			values: [new Uint8Array([1])].concat(Array(8).fill(zero)),
 			txs: eip1559Txs,
 			fixtures: eip1559Fixtures,
+			activeCapabilities: [
+				Capability.EIP1559FeeMarket,
+				Capability.EIP2718TypedTransaction,
+				Capability.EIP2930AccessLists,
+			],
+			notActiveCapabilities: [9999],
+		},
+		{
+			class: PriorityETNIP1Transaction,
+			name: 'PriorityETNIP1Transaction',
+			type: 64,
+			values: [new Uint8Array([1])].concat(Array(8).fill(zero)),
+			txs: etnip1Txs,
+			fixtures: etnip1Fixtures,
 			activeCapabilities: [
 				Capability.EIP1559FeeMarket,
 				Capability.EIP2718TypedTransaction,
@@ -163,6 +184,11 @@ describe('[BaseTransaction]', () => {
 		expect(() => {
 			FeeMarketEIP1559Transaction.fromValuesArray(rlpData);
 		}).toThrow('maxPriorityFeePerGas cannot have leading zeroes');
+		rlpData = etnip1Txs[0].raw();
+		rlpData[2] = toUint8Array('0x0');
+		expect(() => {
+			PriorityETNIP1Transaction.fromValuesArray(rlpData);
+		}).toThrow('maxPriorityFeePerGas cannot have leading zeroes');
 	});
 
 	it('serialize()', () => {
@@ -222,12 +248,19 @@ describe('[BaseTransaction]', () => {
 		for (const txType of txTypes) {
 			for (const [i, tx] of txType.txs.entries()) {
 				const { privateKey } = txType.fixtures[i];
-				if (privateKey !== undefined) {
-					// eslint-disable-next-line jest/no-conditional-expect
-					expect(tx.sign(hexToBytes(privateKey))).toBeTruthy();
+				if(tx.type == 64) {
+					if (privateKey !== undefined) {
+						// eslint-disable-next-line jest/no-conditional-expect
+						expect((tx as PriorityETNIP1Transaction).sign(hexToBytes(privateKey), hexToBytes(privateKey))).toBeTruthy();
+					}
+					expect(() => (tx as PriorityETNIP1Transaction).sign(new Uint8Array(bytesToUint8Array('invalid')))).toThrow();
+				} else {
+					if (privateKey !== undefined) {
+						// eslint-disable-next-line jest/no-conditional-expect
+						expect(tx.sign(hexToBytes(privateKey))).toBeTruthy();
+					}
+					expect(() => tx.sign(new Uint8Array(bytesToUint8Array('invalid')))).toThrow();
 				}
-
-				expect(() => tx.sign(new Uint8Array(bytesToUint8Array('invalid')))).toThrow();
 			}
 		}
 	});
@@ -261,8 +294,14 @@ describe('[BaseTransaction]', () => {
 				if (privateKey === undefined) {
 					continue;
 				}
-				const signedTx = tx.sign(hexToBytes(privateKey));
-				expect(signedTx.getSenderAddress().toString()).toBe(`0x${sendersAddress}`);
+				if(tx.type == 64) {
+					const signedTx = (tx as PriorityETNIP1Transaction).sign(hexToBytes(privateKey), hexToBytes(privateKey));
+					expect(signedTx.getSenderAddress().toString()).toBe(`0x${sendersAddress}`);
+				} else {
+					const signedTx = tx.sign(hexToBytes(privateKey));
+					expect(signedTx.getSenderAddress().toString()).toBe(`0x${sendersAddress}`);
+				}
+				
 			}
 		}
 	});
@@ -274,10 +313,20 @@ describe('[BaseTransaction]', () => {
 				if (privateKey === undefined) {
 					continue;
 				}
-				const signedTx = tx.sign(hexToBytes(privateKey));
-				const txPubKey = signedTx.getSenderPublicKey();
-				const pubKeyFromPriv = privateToPublic(hexToBytes(privateKey));
-				expect(uint8ArrayEquals(txPubKey, pubKeyFromPriv)).toBe(true);
+				if(tx.type == 64) {
+					const signedTx = (tx as PriorityETNIP1Transaction).sign(hexToBytes(privateKey), hexToBytes(privateKey));
+					const [txPubKey, txPrioKey] = (signedTx as PriorityETNIP1Transaction).getSenderAndPriorityPublicKey();
+					const pubKeyFromPriv = privateToPublic(hexToBytes(privateKey));
+					const prioKeyFromPriv = privateToPublic(hexToBytes(privateKey))
+					expect(uint8ArrayEquals(txPubKey, pubKeyFromPriv)).toBe(true);
+					expect(uint8ArrayEquals(txPrioKey, prioKeyFromPriv)).toBe(true);
+				} else {
+					const signedTx = tx.sign(hexToBytes(privateKey));
+					const txPubKey = signedTx.getSenderPublicKey();
+					const pubKeyFromPriv = privateToPublic(hexToBytes(privateKey));
+					expect(uint8ArrayEquals(txPubKey, pubKeyFromPriv)).toBe(true);
+				}
+				
 			}
 		}
 	});
@@ -291,12 +340,21 @@ describe('[BaseTransaction]', () => {
 				if (privateKey === undefined) {
 					continue;
 				}
-				let signedTx = tx.sign(hexToBytes(privateKey));
-				signedTx = JSON.parse(JSON.stringify(signedTx)); // deep clone
-				(signedTx as any).s = SECP256K1_ORDER + BigInt(1);
-				expect(() => {
-					signedTx.getSenderPublicKey();
+				if(tx.type == 64) {
+					let signedTx = (tx as PriorityETNIP1Transaction).sign(hexToBytes(privateKey), hexToBytes(privateKey));
+					signedTx = JSON.parse(JSON.stringify(signedTx)); // deep clone
+					(signedTx as any).s = SECP256K1_ORDER + BigInt(1);
+					expect(() => {
+						signedTx.getSenderPublicKey();
 				}).toThrow();
+				} else {
+					let signedTx = tx.sign(hexToBytes(privateKey));
+					signedTx = JSON.parse(JSON.stringify(signedTx)); // deep clone
+					(signedTx as any).s = SECP256K1_ORDER + BigInt(1);
+					expect(() => {
+						signedTx.getSenderPublicKey();
+					}).toThrow();
+				}
 			}
 		}
 	});
@@ -308,8 +366,13 @@ describe('[BaseTransaction]', () => {
 				if (privateKey === undefined) {
 					continue;
 				}
-				const signedTx = tx.sign(hexToBytes(privateKey));
-				expect(signedTx.verifySignature()).toBeTruthy();
+				if(tx.type == 64) {
+					const signedTx = (tx as PriorityETNIP1Transaction).sign(hexToBytes(privateKey), hexToBytes(privateKey));
+					expect(signedTx.verifySignature()).toBeTruthy();
+				} else {
+					const signedTx = tx.sign(hexToBytes(privateKey));
+					expect(signedTx.verifySignature()).toBeTruthy();
+				}
 			}
 		}
 	});
