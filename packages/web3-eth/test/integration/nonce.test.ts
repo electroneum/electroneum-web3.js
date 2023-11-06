@@ -14,10 +14,10 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { TransactionPollingTimeoutError, TransactionSendTimeoutError } from 'web3-errors';
+import { TransactionPollingTimeoutError, TransactionSendTimeoutError } from '@etn-sc/web3-errors';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { SupportedProviders, Web3 } from 'web3';
-import { Web3Account } from 'web3-eth-accounts';
+import { SupportedProviders, Web3 } from '@etn-sc/web3';
+import { Web3Account } from '@etn-sc/web3-eth-accounts';
 import { Web3Eth } from '../../src';
 
 import {

@@ -15,12 +15,12 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import * as httpProvider from 'web3-providers-http';
-import { Web3Account } from 'web3-eth-accounts';
+import * as httpProvider from '@etn-sc/web3-providers-http';
+import { Web3Account } from '@etn-sc/web3-eth-accounts';
 import Web3, { DEFAULT_RETURN_FORMAT, Transaction } from '../../src';
 import testsData from '../fixtures/transactions.json';
 
-jest.mock('web3-providers-http');
+jest.mock('@etn-sc/web3-providers-http');
 
 describe('signTransaction', () => {
 	let blockNum = 1;

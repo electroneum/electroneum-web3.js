@@ -14,7 +14,7 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { bytesToHex, hexToBytes, uint8ArrayEquals, uint8ArrayConcat } from 'web3-utils';
+import { bytesToHex, hexToBytes, uint8ArrayEquals, uint8ArrayConcat } from '@etn-sc/web3-utils';
 import {
 	AccessListEIP2930Transaction,
 	AccessListUint8ArrayItem,
@@ -278,14 +278,14 @@ describe('[AccessListEIP2930Transaction / FeeMarketEIP1559Transaction] -> EIP-29
 				},
 				{ common },
 			);
-			let signed = tx.type == 64 ? (tx as PriorityETNIP1Transaction).sign(pKey, pKey) : tx.sign(pKey);
+			let signed = tx.type === 64 ? (tx as PriorityETNIP1Transaction).sign(pKey, pKey) : tx.sign(pKey);
 			const signedAddress = signed.getSenderAddress();
 			expect(uint8ArrayEquals(signedAddress.buf, address)).toBeTruthy();
 			// expect(signedAddress).toEqual(Address.publicToAddress(Buffer.from(address)));
 			signed.verifySignature(); // If this throws, test will not end.
 
 			tx = txType.class.fromTxData({}, { common });
-			signed = tx.type == 64 ? (tx as PriorityETNIP1Transaction).sign(pKey, pKey) : tx.sign(pKey);
+			signed = tx.type === 64 ? (tx as PriorityETNIP1Transaction).sign(pKey, pKey) : tx.sign(pKey);
 
 			expect(tx.accessList).toEqual([]);
 			expect(signed.accessList).toEqual([]);
@@ -303,7 +303,7 @@ describe('[AccessListEIP2930Transaction / FeeMarketEIP1559Transaction] -> EIP-29
 			expect(() => {
 				const high = SECP256K1_ORDER_DIV_2 + BigInt(1);
 				const _tx = txType.class.fromTxData({ s: high, r: 1, v: 1 }, { common });
-				const _signed = _tx.type == 64 ? (_tx as PriorityETNIP1Transaction).sign(pKey, pKey) : _tx.sign(pKey);
+				const _signed = _tx.type === 64 ? (_tx as PriorityETNIP1Transaction).sign(pKey, pKey) : _tx.sign(pKey);
 				_signed.getSenderPublicKey();
 			}).toThrow();
 		}

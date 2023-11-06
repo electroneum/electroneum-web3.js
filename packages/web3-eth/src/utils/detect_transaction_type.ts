@@ -15,11 +15,11 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { format, toHex } from 'web3-utils';
-import { TransactionTypeParser, Web3Context } from 'web3-core';
-import { EthExecutionAPI, HardforksOrdered, Transaction, ETH_DATA_FORMAT } from 'web3-types';
-import { Web3ValidatorError, isNullish, validator } from 'web3-validator';
-import { InvalidPropertiesForTransactionTypeError } from 'web3-errors';
+import { format, toHex } from '@etn-sc/web3-utils';
+import { TransactionTypeParser, Web3Context } from '@etn-sc/web3-core';
+import { EthExecutionAPI, HardforksOrdered, Transaction, ETH_DATA_FORMAT } from '@etn-sc/web3-types';
+import { Web3ValidatorError, isNullish, validator } from '@etn-sc/web3-validator';
+import { InvalidPropertiesForTransactionTypeError } from '@etn-sc/web3-errors';
 
 import { InternalTransaction } from '../types.js';
 

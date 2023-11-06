@@ -14,11 +14,11 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { ethRpcMethods } from 'web3-rpc-methods';
+import { ethRpcMethods } from '@etn-sc/web3-rpc-methods';
 
 import Web3Eth from '../../src/index';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 
 describe('web3_eth_methods_no_parameters', () => {
 	let web3Eth: Web3Eth;

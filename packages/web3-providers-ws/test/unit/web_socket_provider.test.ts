@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 import WebSocket from 'isomorphic-ws';
-import { EthExecutionAPI, Web3APIPayload } from 'web3-types';
+import { EthExecutionAPI, Web3APIPayload } from '@etn-sc/web3-types';
 import WebSocketProvider from '../../src/index';
 import {
 	invalidConnectionStrings,

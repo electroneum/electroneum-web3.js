@@ -23,12 +23,11 @@ import {
 	InvalidPasswordError,
 	IVLengthError,
 	PBKDF2IterationsError,
-} from 'web3-errors';
-import { CipherOptions, KeyStore, Bytes } from 'web3-types';
-import { hexToBytes } from 'web3-utils';
-import { AccessListEIP2930TxData, FeeMarketEIP1559TxData, TxData } from '../../src/tx/types';
+} from '@etn-sc/web3-errors';
+import { CipherOptions, KeyStore, Bytes } from '@etn-sc/web3-types';
+import { hexToBytes } from '@etn-sc/web3-utils';
+import { PriorityETNIP1TxData, AccessListEIP2930TxData, FeeMarketEIP1559TxData, TxData } from '../../src/tx/types';
 import { sign, signTransaction, encrypt } from '../../src/account';
-import { PriorityETNIP1TxData } from '../../lib/commonjs';
 
 export const validPrivateKeyToAddressData: [string, string][] = [
 	[

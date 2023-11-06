@@ -9,37 +9,29 @@
 [![NPM Package][npm-image]][npm-url]
 [![Downloads][downloads-image]][npm-url]
 
-This is a sub-package of [web3.js][repo].
+This is a sub-package of [@etn-sc/web3.js][repo].
 
-`web3-validator` contains functions for validating objects.
+`@etn-sc/web3-validator` contains functions for validating objects.
 
 ## Installation
 
-You can install the package either using [NPM](https://www.npmjs.com/package/web3-validator) or using [Yarn](https://yarnpkg.com/package/web3-validator)
-
+You can install the package using [NPM](https://www.npmjs.com/package/@etn-sc/web3-validator)
 ### Using NPM
 
 ```bash
-npm install web3-validator
-```
-
-### Using Yarn
-
-```bash
-yarn add web3-validator
+npm install @etn-sc/web3-validator
 ```
 
 ## Getting Started
 
--   :writing_hand: If you have questions [submit an issue](https://github.com/ChainSafe/web3.js/issues/new) or join us on [Discord](https://discord.gg/yjyvFRP)
-    ![Discord](https://img.shields.io/discord/593655374469660673.svg?label=Discord&logo=discord)
+-   :writing_hand: If you have questions [submit an issue](https://github.com/electroneum/electroneum-web3.js/issues/new)
 
 ### Usage
 
 You can use the the validator by importing as and using to validate;
 
 ```ts
-import { validator } from 'web3-validator';
+import { validator } from '@etn-sc/web3-validator';
 
 // To validate and throw
 validator.validate(['uint8', 'string'], [val1, val2]);
@@ -92,7 +84,7 @@ The implementation of the validator is extension of [JSON-Schema-Draft07](https:
 | test:unit        | Uses `jest` to run tests under `/test/unit`        |
 
 [docs]: https://docs.web3js.org/
-[repo]: https://github.com/web3/web3.js/tree/4.x/packages/web3-validator
+[repo]: https://github.com/electroneum/electroneum-web3.js/tree/4.x/packages/web3-validator
 [npm-image]: https://img.shields.io/github/package-json/v/web3/web3.js/4.x?filename=packages%2Fweb3-validator%2Fpackage.json
-[npm-url]: https://npmjs.org/package/web3-validator
+[npm-url]: https://npmjs.org/package/@etn-sc/web3-validator
 [downloads-image]: https://img.shields.io/npm/dm/web3-validator?label=npm%20downloads

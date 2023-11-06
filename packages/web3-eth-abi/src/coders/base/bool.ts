@@ -14,9 +14,9 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { AbiError, InvalidBooleanError } from 'web3-errors';
-import { AbiParameter } from 'web3-types';
-import { toBool } from 'web3-utils';
+import { AbiError, InvalidBooleanError } from '@etn-sc/web3-errors';
+import { AbiParameter } from '@etn-sc/web3-types';
+import { toBool } from '@etn-sc/web3-utils';
 import { DecoderResult, EncoderResult } from '../types.js';
 import { WORD_SIZE } from '../utils.js';
 import { decodeNumber, encodeNumber } from './number.js';

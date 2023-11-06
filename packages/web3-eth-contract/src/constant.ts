@@ -14,4 +14,4 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-export { ALL_EVENTS, ALL_EVENTS_ABI } from 'web3-eth';
+export { ALL_EVENTS, ALL_EVENTS_ABI } from '@etn-sc/web3-eth';

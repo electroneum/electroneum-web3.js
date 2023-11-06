@@ -14,7 +14,7 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { hexToBytes } from 'web3-utils';
+import { hexToBytes } from '@etn-sc/web3-utils';
 import { Chain, Common, ConsensusAlgorithm, ConsensusType, Hardfork } from '../../../src/common';
 import gethGenesisKiln from '../../fixtures/common/geth-genesis-kiln.json';
 

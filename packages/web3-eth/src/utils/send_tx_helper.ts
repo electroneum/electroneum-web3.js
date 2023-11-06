@@ -31,17 +31,17 @@ import {
 	LogsInput,
 	TransactionHash,
 	ContractAbiWithSignature,
-} from 'web3-types';
-import { Web3Context, Web3EventEmitter, Web3PromiEvent } from 'web3-core';
-import { isNullish } from 'web3-validator';
+} from '@etn-sc/web3-types';
+import { Web3Context, Web3EventEmitter, Web3PromiEvent } from '@etn-sc/web3-core';
+import { isNullish } from '@etn-sc/web3-validator';
 import {
 	ContractExecutionError,
 	InvalidResponseError,
 	TransactionRevertedWithoutReasonError,
 	TransactionRevertInstructionError,
 	TransactionRevertWithCustomError,
-} from 'web3-errors';
-import { ethRpcMethods } from 'web3-rpc-methods';
+} from '@etn-sc/web3-errors';
+import { ethRpcMethods } from '@etn-sc/web3-rpc-methods';
 
 import {
 	SendSignedTransactionEvents,

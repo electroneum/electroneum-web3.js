@@ -14,11 +14,11 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { Web3Context } from 'web3-core';
-import { format } from 'web3-utils';
-import { DEFAULT_RETURN_FORMAT, ETH_DATA_FORMAT, Web3EthExecutionAPI } from 'web3-types';
-import { isNullish } from 'web3-validator';
-import { ethRpcMethods } from 'web3-rpc-methods';
+import { Web3Context } from '@etn-sc/web3-core';
+import { format } from '@etn-sc/web3-utils';
+import { DEFAULT_RETURN_FORMAT, ETH_DATA_FORMAT, Web3EthExecutionAPI } from '@etn-sc/web3-types';
+import { isNullish } from '@etn-sc/web3-validator';
+import { ethRpcMethods } from '@etn-sc/web3-rpc-methods';
 
 import { sendTransaction } from '../../../src/rpc_method_wrappers';
 import { formatTransaction } from '../../../src';
@@ -32,7 +32,7 @@ import {
 } from './fixtures/send_transaction';
 import { transactionReceiptSchema } from '../../../src/schemas';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 jest.mock('../../../src/utils/wait_for_transaction_receipt');
 jest.mock('../../../src/utils/watch_transaction_for_confirmations');
 

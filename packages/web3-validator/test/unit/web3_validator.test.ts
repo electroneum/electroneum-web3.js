@@ -14,7 +14,7 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { SchemaFormatError } from 'web3-errors'
+import { SchemaFormatError } from '@etn-sc/web3-errors'
 import { abiToJsonSchemaCases } from '../fixtures/abi_to_json_schema';
 import { Web3Validator } from '../../src/web3_validator';
 import { Web3ValidatorError } from '../../src/errors';

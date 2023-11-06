@@ -14,8 +14,8 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { validator } from 'web3-validator';
-import { blockSchema } from 'web3-eth';
+import { validator } from '@etn-sc/web3-validator';
+import { blockSchema } from '@etn-sc/web3-eth';
 import {
 	closeOpenConnection,
 	getSystemTestProvider,
@@ -24,7 +24,7 @@ import {
 } from '../../../shared_fixtures/system_tests_utils';
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-var-requires
-const Web3 = require('web3').default;
+const Web3 = require('@etn-sc/web3').default;
 
 describe('CJS - Black Box Unit Tests - web3.eth.getBlock', () => {
 	let web3: typeof Web3;

@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { InvalidBlockError } from 'web3-errors';
+import { InvalidBlockError } from '@etn-sc/web3-errors';
 import {
 	checkAddressCheckSum as checkAddressCheckSumValidator,
 	isAddress as isAddressValidator,
@@ -29,8 +29,8 @@ import {
 	isTopic as isTopicValidator,
 	isTopicInBloom as isTopicInBloomValidator,
 	isUserEthereumAddressInBloom as isUserEthereumAddressInBloomValidator,
-} from 'web3-validator';
-import { BlockNumberOrTag, BlockTags } from 'web3-types';
+} from '@etn-sc/web3-validator';
+import { BlockNumberOrTag, BlockTags } from '@etn-sc/web3-types';
 
 /**
  * @deprecated Will be removed in next release. Please use `web3-validator` package instead.

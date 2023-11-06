@@ -14,17 +14,17 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { Web3Context } from 'web3-core';
-import { format } from 'web3-utils';
-import { DEFAULT_RETURN_FORMAT, FMT_BYTES, FMT_NUMBER, Web3EthExecutionAPI } from 'web3-types';
-import { ethRpcMethods } from 'web3-rpc-methods';
-import { Wallet } from 'web3-eth-accounts';
+import { Web3Context } from '@etn-sc/web3-core';
+import { format } from '@etn-sc/web3-utils';
+import { DEFAULT_RETURN_FORMAT, FMT_BYTES, FMT_NUMBER, Web3EthExecutionAPI } from '@etn-sc/web3-types';
+import { ethRpcMethods } from '@etn-sc/web3-rpc-methods';
+import { Wallet } from '@etn-sc/web3-eth-accounts';
 import { sign } from '../../../src/rpc_method_wrappers';
 import { mockRpcResponse, testData, walletTestData } from './fixtures/sign';
 import { createAccountProvider } from '../../fixtures/system_test_utils';
 import { SignatureObjectSchema } from '../../../src/schemas';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 
 describe('sign', () => {
 	let web3Context: Web3Context<Web3EthExecutionAPI>;

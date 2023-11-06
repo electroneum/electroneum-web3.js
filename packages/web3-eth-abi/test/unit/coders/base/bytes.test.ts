@@ -15,8 +15,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { AbiError } from 'web3-errors';
-import { hexToBytes } from 'web3-utils';
+import { AbiError } from '@etn-sc/web3-errors';
+import { hexToBytes } from '@etn-sc/web3-utils';
 import { decodeBytes, encodeBytes } from '../../../../src/coders/base/bytes';
 import {
 	invalidBytesDecoderData,

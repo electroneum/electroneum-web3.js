@@ -28,13 +28,13 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 // You should have received a copy of the GNU Lesser General Public License
 // along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 // */
-import { Web3RequestManager } from 'web3-core';
-import { validator } from 'web3-validator';
+import { Web3RequestManager } from '@etn-sc/web3-core';
+import { validator } from '@etn-sc/web3-validator';
 
 import { ethRpcMethods } from '../../../src/index';
 import { testData } from './fixtures/get_block_transaction_count_by_number';
 
-jest.mock('web3-validator');
+jest.mock('@etn-sc/web3-validator');
 
 describe('getBlockTransactionCountByNumber', () => {
 	let requestManagerSendSpy: jest.Mock;

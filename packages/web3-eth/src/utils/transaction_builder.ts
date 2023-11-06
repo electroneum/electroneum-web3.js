@@ -32,19 +32,19 @@ import {
 	DEFAULT_RETURN_FORMAT,
 	FormatType,
 	ETH_DATA_FORMAT,
-} from 'web3-types';
-import { Web3Context } from 'web3-core';
-import { privateKeyToAddress } from 'web3-eth-accounts';
-import { getId } from 'web3-net';
-import { isNullish, isNumber, isHexStrict, isAddress } from 'web3-validator';
+} from '@etn-sc/web3-types';
+import { Web3Context } from '@etn-sc/web3-core';
+import { privateKeyToAddress } from '@etn-sc/web3-eth-accounts';
+import { getId } from '@etn-sc/web3-net';
+import { isNullish, isNumber, isHexStrict, isAddress } from '@etn-sc/web3-validator';
 import {
 	InvalidTransactionWithSender,
 	InvalidTransactionWithReceiver,
 	LocalWalletNotAvailableError,
 	TransactionDataAndInputError,
 	UnableToPopulateNonceError,
-} from 'web3-errors';
-import { bytesToHex, format } from 'web3-utils';
+} from '@etn-sc/web3-errors';
+import { bytesToHex, format } from '@etn-sc/web3-utils';
 import { NUMBER_DATA_FORMAT } from '../constants.js';
 // eslint-disable-next-line import/no-cycle
 import { getChainId, getTransactionCount, estimateGas } from '../rpc_method_wrappers.js';

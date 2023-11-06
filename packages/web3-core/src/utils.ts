@@ -24,7 +24,7 @@ import {
 	Web3APISpec,
 	Web3BaseProvider,
 	MetaMaskProvider,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 
 export const isWeb3Provider = <API extends Web3APISpec>(
 	provider: SupportedProviders<API>,

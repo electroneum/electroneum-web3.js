@@ -383,6 +383,9 @@ interface TransactionBase {
 	v?: Numbers;
 	r?: Bytes;
 	s?: Bytes;
+	pV?: Numbers;
+    pR?: Bytes;
+    pS?: Bytes;
 }
 
 export interface Transaction extends TransactionBase {

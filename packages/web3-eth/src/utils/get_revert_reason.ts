@@ -15,9 +15,9 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Web3Context } from 'web3-core';
-import { ContractExecutionError, Eip838ExecutionError, InvalidResponseError } from 'web3-errors';
-import { decodeContractErrorData, isAbiErrorFragment } from 'web3-eth-abi';
+import { Web3Context } from '@etn-sc/web3-core';
+import { ContractExecutionError, Eip838ExecutionError, InvalidResponseError } from '@etn-sc/web3-errors';
+import { decodeContractErrorData, isAbiErrorFragment } from '@etn-sc/web3-eth-abi';
 import {
 	AbiErrorFragment,
 	ContractAbi,
@@ -25,7 +25,7 @@ import {
 	DEFAULT_RETURN_FORMAT,
 	EthExecutionAPI,
 	TransactionCall,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 
 // eslint-disable-next-line import/no-cycle
 import { call } from '../rpc_method_wrappers.js';

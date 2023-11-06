@@ -2237,6 +2237,10 @@ If there are any bugs, improvements, optimizations or any new feature proposal f
 -   Interface `MetaMaskProvider` added and is part of `SupportedProviders` (#6534)
 -   `gasPrice` was added to `Transaction1559UnsignedAPI` type. (#6539)
 
+#### web3-eth-accounts
+
+-   Added support for `ETNIP-1 PriorityTransactions`
+
 ### Changed
 
 #### web3

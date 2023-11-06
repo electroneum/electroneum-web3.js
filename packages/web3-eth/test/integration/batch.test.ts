@@ -15,8 +15,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { SupportedProviders } from 'web3-types';
-import { hexToNumber } from 'web3-utils';
+import { SupportedProviders } from '@etn-sc/web3-types';
+import { hexToNumber } from '@etn-sc/web3-utils';
 import { Web3Eth } from '../../src';
 
 import {

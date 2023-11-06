@@ -15,8 +15,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Bytes, Transaction } from 'web3-types';
-import Eth from 'web3-eth';
+import { Bytes, Transaction } from '@etn-sc/web3-types';
+import Eth from '@etn-sc/web3-eth';
 import {
 	decodeLog,
 	decodeParameter,
@@ -25,7 +25,7 @@ import {
 	encodeFunctionSignature,
 	encodeParameter,
 	encodeParameters,
-} from 'web3-eth-abi';
+} from '@etn-sc/web3-eth-abi';
 import {
 	encrypt,
 	hashMessage,
@@ -33,14 +33,15 @@ import {
 	recoverTransaction,
 	sign,
 	signTransaction,
+	signPriorityTransaction,
 	Wallet,
 	Web3Account,
-} from 'web3-eth-accounts';
-import { Contract } from 'web3-eth-contract';
-import { ENS } from 'web3-eth-ens';
-import { Net } from 'web3-net';
-import { Iban } from 'web3-eth-iban';
-import { Personal } from 'web3-eth-personal';
+} from '@etn-sc/web3-eth-accounts';
+import { Contract } from '@etn-sc/web3-eth-contract';
+import { ENS } from '@etn-sc/web3-eth-ens';
+import { Net } from '@etn-sc/web3-net';
+import { Iban } from '@etn-sc/web3-eth-iban';
+import { Personal } from '@etn-sc/web3-eth-personal';
 
 /**
  * The Ethereum interface for main web3 object. It provides extra methods in addition to `web3-eth` interface.
@@ -79,6 +80,11 @@ export interface Web3EthInterface extends Eth {
 			transaction: Transaction,
 			privateKey: Bytes,
 		) => ReturnType<typeof signTransaction>;
+		signPriorityTransaction: (
+			transaction: Transaction,
+			privateKey: Bytes,
+			priorityPrivateKey: Bytes,
+		) => ReturnType<typeof signPriorityTransaction>;
 		recoverTransaction: typeof recoverTransaction;
 		hashMessage: typeof hashMessage;
 		sign: typeof sign;

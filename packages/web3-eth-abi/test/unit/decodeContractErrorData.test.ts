@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Eip838ExecutionError } from 'web3-errors';
+import { Eip838ExecutionError } from '@etn-sc/web3-errors';
 import { decodeContractErrorData } from '../../src/decode_contract_error_data';
 
 import { validDecodeContractErrorData, invalidDecodeContractErrorData } from '../fixtures/data';

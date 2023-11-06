@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { format } from 'web3-utils';
+import { format } from '@etn-sc/web3-utils';
 
 import {
 	AbiEventFragment,
@@ -24,9 +24,9 @@ import {
 	DEFAULT_RETURN_FORMAT,
 	EventLog,
 	ContractAbiWithSignature,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 
-import { decodeLog } from 'web3-eth-abi';
+import { decodeLog } from '@etn-sc/web3-eth-abi';
 
 import { logSchema } from '../schemas.js';
 import { ALL_EVENTS } from '../constants.js';

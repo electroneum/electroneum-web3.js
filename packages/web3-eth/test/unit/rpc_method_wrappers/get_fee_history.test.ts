@@ -14,24 +14,24 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { Web3Context } from 'web3-core';
-import { format } from 'web3-utils';
+import { Web3Context } from '@etn-sc/web3-core';
+import { format } from '@etn-sc/web3-utils';
 import {
 	ETH_DATA_FORMAT,
 	DEFAULT_RETURN_FORMAT,
 	FMT_NUMBER,
 	FMT_BYTES,
 	Web3EthExecutionAPI,
-} from 'web3-types';
-import { isNullish } from 'web3-validator';
-import { ethRpcMethods } from 'web3-rpc-methods';
+} from '@etn-sc/web3-types';
+import { isNullish } from '@etn-sc/web3-validator';
+import { ethRpcMethods } from '@etn-sc/web3-rpc-methods';
 
 import { getFeeHistory } from '../../../src/rpc_method_wrappers';
 import { mockRpcResponse, testData } from './fixtures/get_fee_history';
 import { feeHistorySchema } from '../../../src/schemas';
 import { NUMBER_DATA_FORMAT } from '../../../src/constants';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 
 describe('getFeeHistory', () => {
 	let web3Context: Web3Context<Web3EthExecutionAPI>;

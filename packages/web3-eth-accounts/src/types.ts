@@ -15,13 +15,13 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Web3BaseWalletAccount, HexString } from 'web3-types';
-import { FeeMarketEIP1559TxData, AccessListEIP2930TxData, TxData } from './tx/types.js';
+import { Web3BaseWalletAccount, HexString } from '@etn-sc/web3-types';
+import { PriorityETNIP1TxData, FeeMarketEIP1559TxData, AccessListEIP2930TxData, TxData } from './tx/types.js';
 import {
 	AccessListEIP2930Transaction,
 	FeeMarketEIP1559Transaction,
-	Transaction,
 	PriorityETNIP1Transaction,
+	Transaction,
 } from './tx';
 
 export type SignatureObject = {
@@ -50,7 +50,7 @@ export type SignTransactionFunction = (
 		| TxData
 		| AccessListEIP2930TxData
 		| FeeMarketEIP1559TxData
-		| PriorityETNIP1Transaction
+		| PriorityETNIP1TxData
 		| Record<string, unknown>,
 ) => SignTransactionResult;
 

@@ -17,7 +17,7 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 
 import { keccak256 } from 'ethereum-cryptography/keccak.js';
 import { bytesToUtf8, utf8ToBytes as ecUtf8ToBytes } from 'ethereum-cryptography/utils.js';
-import { Address, Bytes, HexString, Numbers, ValueTypes } from 'web3-types';
+import { Address, Bytes, HexString, Numbers, ValueTypes } from '@etn-sc/web3-types';
 import {
 	isAddress,
 	isHex,
@@ -27,7 +27,7 @@ import {
 	utils,
 	utils as validatorUtils,
 	validator,
-} from 'web3-validator';
+} from '@etn-sc/web3-validator';
 
 import {
 	HexProcessingError,
@@ -36,7 +36,7 @@ import {
 	InvalidBytesError,
 	InvalidNumberError,
 	InvalidUnitError,
-} from 'web3-errors';
+} from '@etn-sc/web3-errors';
 
 // Ref: https://ethdocs.org/en/latest/ether.html
 // Note: this could be simplified using ** operator, but babel does not handle it well (https://github.com/babel/babel/issues/13109)

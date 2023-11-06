@@ -25,11 +25,11 @@ import {
 	ValidChains,
 	FormatType,
 	ETH_DATA_FORMAT,
-} from 'web3-types';
-import { Web3Context } from 'web3-core';
-import { toNumber } from 'web3-utils';
-import { TransactionFactory, TxOptions, Common } from 'web3-eth-accounts';
-import { isNullish } from 'web3-validator';
+} from '@etn-sc/web3-types';
+import { Web3Context } from '@etn-sc/web3-core';
+import { toNumber } from '@etn-sc/web3-utils';
+import { TransactionFactory, TxOptions, Common } from '@etn-sc/web3-eth-accounts';
+import { isNullish } from '@etn-sc/web3-validator';
 import { validateTransactionForSigning } from '../validation.js';
 import { formatTransaction } from './format_transaction.js';
 import { transactionBuilder } from './transaction_builder.js';

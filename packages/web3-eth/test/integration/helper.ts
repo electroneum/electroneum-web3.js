@@ -20,9 +20,9 @@ import {
 	TransactionInfo,
 	TransactionReceipt,
 	FMT_NUMBER,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import Web3 from 'web3';
+import Web3 from '@etn-sc/web3';
 import { BasicAbi } from '../shared_fixtures/build/Basic';
 import {
 	closeOpenConnection,

@@ -47,13 +47,13 @@ import {
 	TransactionForAccessList,
 	AccessListResult,
 	Eip712TypedData,
-} from 'web3-types';
-import { Web3Context, Web3PromiEvent } from 'web3-core';
-import { format, hexToBytes, bytesToUint8Array, numberToHex } from 'web3-utils';
-import { TransactionFactory } from 'web3-eth-accounts';
-import { isBlockTag, isBytes, isNullish, isString } from 'web3-validator';
-import { SignatureError } from 'web3-errors';
-import { ethRpcMethods } from 'web3-rpc-methods';
+} from '@etn-sc/web3-types';
+import { Web3Context, Web3PromiEvent } from '@etn-sc/web3-core';
+import { format, hexToBytes, bytesToUint8Array, numberToHex } from '@etn-sc/web3-utils';
+import { TransactionFactory } from '@etn-sc/web3-eth-accounts';
+import { isBlockTag, isBytes, isNullish, isString } from '@etn-sc/web3-validator';
+import { SignatureError } from '@etn-sc/web3-errors';
+import { ethRpcMethods } from '@etn-sc/web3-rpc-methods';
 
 import { decodeSignedTransaction } from './utils/decode_signed_transaction.js';
 import {

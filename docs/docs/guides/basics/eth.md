@@ -65,7 +65,7 @@ Note that we are installing the latest version of 4.x, at the time of this tutor
 Next, create a new file called `index.ts` in your project directory and add the following code to it:
 
 ```javascript
-const { Web3 } = require('web3'); //  web3.js has native ESM builds and (`import Web3 from 'web3'`)
+const { Web3 } = require('web3'); //  web3.js has native ESM builds and (`import Web3 from '@etn-sc/web3'`)
 
 // Set up a connection to the Ganache network
 const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
@@ -99,7 +99,7 @@ In the first example, we are going to send a simple value transaction.
 Create a file named `transaction.ts` and fill it with the following code:
 
 ```typescript
-const { Web3 } = require('web3'); //  web3.js has native ESM builds and (`import Web3 from 'web3'`)
+const { Web3 } = require('web3'); //  web3.js has native ESM builds and (`import Web3 from '@etn-sc/web3'`)
 const fs = require('fs');
 const path = require('path');
 
@@ -202,7 +202,7 @@ transactionHash {
 In the next example, we are going to use `estimateGas` function to see the expected gas for contract deployment. (For more on contracts, please see the corresponding tutotial). Create a file named `estimate.ts` and fill it with the following code:
 
 ```typescript
-import Web3, { ETH_DATA_FORMAT, DEFAULT_RETURN_FORMAT } from 'web3';
+import Web3, { ETH_DATA_FORMAT, DEFAULT_RETURN_FORMAT } from '@etn-sc/web3';
 
 async function estimate() {
 	// abi of our contract
@@ -284,7 +284,7 @@ If everything is working correctly, you should see something like the following:
 In the next example we are going to sign a transaction and use `sendSignedTransaction` to send the signed transaction. Create a file named `sendSigned.ts` and fill it with the following code:
 
 ```typescript
-import Web3 from 'web3';
+import Web3 from '@etn-sc/web3';
 const web3 = new Web3('http://localhost:7545');
 
 //make sure to copy the private key from ganache

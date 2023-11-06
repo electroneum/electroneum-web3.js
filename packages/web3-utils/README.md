@@ -9,30 +9,24 @@
 [![NPM Package][npm-image]][npm-url]
 [![Downloads][downloads-image]][npm-url]
 
-This is a sub-package of [web3.js][repo].
+This is a sub-package of [@etn-sc/web3.js][repo].
 
-`web3-utils` This contains useful utility functions for Dapp developers.
+`@etn-sc/web3-utils` This contains useful utility functions for Dapp developers.
 
 ## Installation
 
-You can install the package either using [NPM](https://www.npmjs.com/package/web3-utils) or using [Yarn](https://yarnpkg.com/package/web3-utils)
+You can install the package using [NPM](https://www.npmjs.com/package/@etn-sc/web3-utils)
 
 ### Using NPM
 
 ```bash
-npm install web3-utils
-```
-
-### Using Yarn
-
-```bash
-yarn add web3-utils
+npm install @etn-sc/web3-utils
 ```
 
 ## Usage
 
 ```js
-const Web3Utils = require('web3-utils');
+const Web3Utils = require('@etn-sc/web3-utils');
 console.log(Web3Utils);
 {
     sha3: function(){},
@@ -44,8 +38,7 @@ console.log(Web3Utils);
 
 ## Getting Started
 
--   :writing_hand: If you have questions [submit an issue](https://github.com/ChainSafe/web3.js/issues/new) or join us on [Discord](https://discord.gg/yjyvFRP)
-    ![Discord](https://img.shields.io/discord/593655374469660673.svg?label=Discord&logo=discord)
+-   :writing_hand: If you have questions [submit an issue](https://github.com/electroneum/electroneum-web3.js/issues/new)
 
 ## Prerequisites
 
@@ -66,7 +59,7 @@ console.log(Web3Utils);
 | test:unit        | Uses `jest` to run tests under `/test/unit`        |
 
 [docs]: https://docs.web3js.org/
-[repo]: https://github.com/web3/web3.js/tree/4.x/packages/web3-utils
+[repo]: https://github.com/electroneum/electroneum-web3.js/tree/4.x/packages/web3-utils
 [npm-image]: https://img.shields.io/github/package-json/v/web3/web3.js/4.x?filename=packages%2Fweb3-utils%2Fpackage.json
-[npm-url]: https://npmjs.org/package/web3-utils
+[npm-url]: https://npmjs.org/package/@etn-sc/web3-utils
 [downloads-image]: https://img.shields.io/npm/dm/web3-utils?label=npm%20downloads

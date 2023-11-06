@@ -15,8 +15,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { AbiError } from 'web3-errors';
-import { isNullish, leftPad, rightPad, toHex } from 'web3-utils';
+import { AbiError } from '@etn-sc/web3-errors';
+import { isNullish, leftPad, rightPad, toHex } from '@etn-sc/web3-utils';
 import {
 	AbiInput,
 	AbiCoderStruct,
@@ -26,7 +26,7 @@ import {
 	AbiEventFragment,
 	AbiFunctionFragment,
 	AbiConstructorFragment,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 
 export const isAbiFragment = (item: unknown): item is AbiFragment =>
 	!isNullish(item) &&

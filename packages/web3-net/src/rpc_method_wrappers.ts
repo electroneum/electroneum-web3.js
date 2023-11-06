@@ -15,10 +15,10 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { format } from 'web3-utils';
-import { Web3Context } from 'web3-core';
-import { DataFormat, Web3NetAPI } from 'web3-types';
-import { netRpcMethods } from 'web3-rpc-methods';
+import { format } from '@etn-sc/web3-utils';
+import { Web3Context } from '@etn-sc/web3-core';
+import { DataFormat, Web3NetAPI } from '@etn-sc/web3-types';
+import { netRpcMethods } from '@etn-sc/web3-rpc-methods';
 
 export async function getId<ReturnFormat extends DataFormat>(
 	web3Context: Web3Context<Web3NetAPI>,

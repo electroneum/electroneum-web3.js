@@ -16,15 +16,15 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 import { Socket, SocketConstructorOpts } from 'net';
-import { ConnectionNotOpenError, InvalidClientError } from 'web3-errors';
-import { ReconnectOptions, SocketProvider, toUtf8 } from 'web3-utils';
+import { ConnectionNotOpenError, InvalidClientError } from '@etn-sc/web3-errors';
+import { ReconnectOptions, SocketProvider, toUtf8 } from '@etn-sc/web3-utils';
 import {
 	EthExecutionAPI,
 	Web3APIMethod,
 	Web3APIPayload,
 	Web3APISpec,
 	Web3ProviderStatus,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 import { existsSync } from 'fs';
 
 /**

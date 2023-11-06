@@ -28,9 +28,9 @@ import {
 	HexString,
 	Web3APIParams,
 	Web3APISpec,
-} from 'web3-types';
-import { jsonRpc } from 'web3-utils';
-import { SubscriptionError } from 'web3-errors';
+} from '@etn-sc/web3-types';
+import { jsonRpc } from '@etn-sc/web3-utils';
+import { SubscriptionError } from '@etn-sc/web3-errors';
 
 // eslint-disable-next-line import/no-cycle
 import { Web3SubscriptionManager } from './web3_subscription_manager.js';

@@ -14,7 +14,7 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { bytesToUint8Array, hexToBytes, uint8ArrayEquals } from 'web3-utils';
+import { bytesToUint8Array, hexToBytes, uint8ArrayEquals } from '@etn-sc/web3-utils';
 import {
 	AccessListEIP2930Transaction,
 	Capability,
@@ -248,17 +248,19 @@ describe('[BaseTransaction]', () => {
 		for (const txType of txTypes) {
 			for (const [i, tx] of txType.txs.entries()) {
 				const { privateKey } = txType.fixtures[i];
-				if(tx.type == 64) {
+				if(tx.type === 64) {
 					if (privateKey !== undefined) {
 						// eslint-disable-next-line jest/no-conditional-expect
 						expect((tx as PriorityETNIP1Transaction).sign(hexToBytes(privateKey), hexToBytes(privateKey))).toBeTruthy();
 					}
+					// eslint-disable-next-line jest/no-conditional-expect
 					expect(() => (tx as PriorityETNIP1Transaction).sign(new Uint8Array(bytesToUint8Array('invalid')))).toThrow();
 				} else {
 					if (privateKey !== undefined) {
 						// eslint-disable-next-line jest/no-conditional-expect
 						expect(tx.sign(hexToBytes(privateKey))).toBeTruthy();
 					}
+					// eslint-disable-next-line jest/no-conditional-expect
 					expect(() => tx.sign(new Uint8Array(bytesToUint8Array('invalid')))).toThrow();
 				}
 			}
@@ -294,13 +296,8 @@ describe('[BaseTransaction]', () => {
 				if (privateKey === undefined) {
 					continue;
 				}
-				if(tx.type == 64) {
-					const signedTx = (tx as PriorityETNIP1Transaction).sign(hexToBytes(privateKey), hexToBytes(privateKey));
-					expect(signedTx.getSenderAddress().toString()).toBe(`0x${sendersAddress}`);
-				} else {
-					const signedTx = tx.sign(hexToBytes(privateKey));
-					expect(signedTx.getSenderAddress().toString()).toBe(`0x${sendersAddress}`);
-				}
+				const signedTx = tx.type === 64? (tx as PriorityETNIP1Transaction).sign(hexToBytes(privateKey), hexToBytes(privateKey)) : tx.sign(hexToBytes(privateKey));
+				expect(signedTx.getSenderAddress().toString()).toBe(`0x${sendersAddress}`);
 				
 			}
 		}
@@ -313,17 +310,20 @@ describe('[BaseTransaction]', () => {
 				if (privateKey === undefined) {
 					continue;
 				}
-				if(tx.type == 64) {
+				if(tx.type === 64) {
 					const signedTx = (tx as PriorityETNIP1Transaction).sign(hexToBytes(privateKey), hexToBytes(privateKey));
-					const [txPubKey, txPrioKey] = (signedTx as PriorityETNIP1Transaction).getSenderAndPriorityPublicKey();
+					const [txPubKey, txPrioKey] = signedTx.getSenderAndPriorityPublicKey();
 					const pubKeyFromPriv = privateToPublic(hexToBytes(privateKey));
 					const prioKeyFromPriv = privateToPublic(hexToBytes(privateKey))
+					// eslint-disable-next-line jest/no-conditional-expect
 					expect(uint8ArrayEquals(txPubKey, pubKeyFromPriv)).toBe(true);
+					// eslint-disable-next-line jest/no-conditional-expect
 					expect(uint8ArrayEquals(txPrioKey, prioKeyFromPriv)).toBe(true);
 				} else {
 					const signedTx = tx.sign(hexToBytes(privateKey));
 					const txPubKey = signedTx.getSenderPublicKey();
 					const pubKeyFromPriv = privateToPublic(hexToBytes(privateKey));
+					// eslint-disable-next-line jest/no-conditional-expect
 					expect(uint8ArrayEquals(txPubKey, pubKeyFromPriv)).toBe(true);
 				}
 				
@@ -340,21 +340,12 @@ describe('[BaseTransaction]', () => {
 				if (privateKey === undefined) {
 					continue;
 				}
-				if(tx.type == 64) {
-					let signedTx = (tx as PriorityETNIP1Transaction).sign(hexToBytes(privateKey), hexToBytes(privateKey));
-					signedTx = JSON.parse(JSON.stringify(signedTx)); // deep clone
-					(signedTx as any).s = SECP256K1_ORDER + BigInt(1);
-					expect(() => {
+				let signedTx = tx.type === 64 ? (tx as PriorityETNIP1Transaction).sign(hexToBytes(privateKey), hexToBytes(privateKey)) : tx.sign(hexToBytes(privateKey));
+				signedTx = JSON.parse(JSON.stringify(signedTx)); // deep clone
+				(signedTx as any).s = SECP256K1_ORDER + BigInt(1);
+				expect(() => {
 						signedTx.getSenderPublicKey();
 				}).toThrow();
-				} else {
-					let signedTx = tx.sign(hexToBytes(privateKey));
-					signedTx = JSON.parse(JSON.stringify(signedTx)); // deep clone
-					(signedTx as any).s = SECP256K1_ORDER + BigInt(1);
-					expect(() => {
-						signedTx.getSenderPublicKey();
-					}).toThrow();
-				}
 			}
 		}
 	});
@@ -366,13 +357,8 @@ describe('[BaseTransaction]', () => {
 				if (privateKey === undefined) {
 					continue;
 				}
-				if(tx.type == 64) {
-					const signedTx = (tx as PriorityETNIP1Transaction).sign(hexToBytes(privateKey), hexToBytes(privateKey));
-					expect(signedTx.verifySignature()).toBeTruthy();
-				} else {
-					const signedTx = tx.sign(hexToBytes(privateKey));
-					expect(signedTx.verifySignature()).toBeTruthy();
-				}
+				const signedTx = tx.type === 64 ? (tx as PriorityETNIP1Transaction).sign(hexToBytes(privateKey), hexToBytes(privateKey)) : tx.sign(hexToBytes(privateKey));
+				expect(signedTx.verifySignature()).toBeTruthy();
 			}
 		}
 	});

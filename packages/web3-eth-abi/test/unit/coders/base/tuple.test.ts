@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { hexToBytes } from 'web3-utils';
+import { hexToBytes } from '@etn-sc/web3-utils';
 import { decodeTuple, encodeTuple } from '../../../../src/coders/base/tuple';
 import { validDecoderData, validEncoderData } from '../../../fixtures/coders/base/tuple';
 

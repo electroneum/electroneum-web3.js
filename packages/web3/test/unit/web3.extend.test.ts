@@ -15,10 +15,10 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Address, BlockTag } from 'web3-types';
+import { Address, BlockTag } from '@etn-sc/web3-types';
 import { Web3 } from '../../src/web3';
 
-declare module 'web3' {
+declare module '@etn-sc/web3' {
 	interface Web3Context {
 		// for first test like web3.myModule.getL2Balance(...)
 		myModule: {

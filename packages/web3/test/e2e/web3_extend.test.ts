@@ -14,13 +14,13 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { isNumber } from 'web3-validator';
+import { isNumber } from '@etn-sc/web3-validator';
 
 import Web3 from '../../src';
 import { getSystemE2ETestProvider } from './e2e_utils';
 import { closeOpenConnection, getSystemTestBackend } from '../shared_fixtures/system_tests_utils';
 
-declare module 'web3' {
+declare module '@etn-sc/web3' {
 	interface Web3Context {
 		L2Module: {
 			getL2BlockInfo(): Promise<bigint>;

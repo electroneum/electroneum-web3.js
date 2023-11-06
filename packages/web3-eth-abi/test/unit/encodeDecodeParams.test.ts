@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { AbiInput } from 'web3-types';
+import { AbiInput } from '@etn-sc/web3-types';
 import { decodeParameters, encodeParameters } from '../../src';
 import testsData from '../fixtures/abitestsdata.json';
 import { deepEqualTolerateBigInt, removeKey } from './test_utils';

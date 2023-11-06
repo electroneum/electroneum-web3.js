@@ -15,17 +15,17 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Web3Eth } from 'web3-eth';
+import { Web3Eth } from '@etn-sc/web3-eth';
 
-import * as abi from 'web3-eth-abi';
-import * as accounts from 'web3-eth-accounts';
-import * as contract from 'web3-eth-contract';
-import * as ens from 'web3-eth-ens';
-import * as personal from 'web3-eth-personal';
-import * as iban from 'web3-eth-iban';
+import * as abi from '@etn-sc/web3-eth-abi';
+import * as accounts from '@etn-sc/web3-eth-accounts';
+import * as contract from '@etn-sc/web3-eth-contract';
+import * as ens from '@etn-sc/web3-eth-ens';
+import * as personal from '@etn-sc/web3-eth-personal';
+import * as iban from '@etn-sc/web3-eth-iban';
 
-import * as http from 'web3-providers-http';
-import * as ws from 'web3-providers-ws';
+import * as http from '@etn-sc/web3-providers-http';
+import * as ws from '@etn-sc/web3-providers-ws';
 
 import Web3Default, { Web3, providers, eth } from '../../src/index';
 

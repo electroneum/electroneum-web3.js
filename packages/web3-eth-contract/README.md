@@ -9,30 +9,23 @@
 [![NPM Package][npm-image]][npm-url]
 [![Downloads][downloads-image]][npm-url]
 
-This is a sub-package of [web3.js][repo].
+This is a sub-package of [@etn-sc/web3.js][repo].
 
-`web3-eth-contract` contains the contract package used in `web3-eth`.
+`@etn-sc/web3-eth-contract` contains the contract package used in `@etn-sc/web3-eth`.
 
 ## Installation
 
-You can install the package either using [NPM](https://www.npmjs.com/package/web3-eth-contract) or using [Yarn](https://yarnpkg.com/package/web3-eth-contract)
+You can install the package using [NPM](https://www.npmjs.com/package/@etn-sc/web3-eth-contract)
 
 ### Using NPM
 
 ```bash
-npm install web3-eth-contract
-```
-
-### Using Yarn
-
-```bash
-yarn add web3-eth-contract
+npm install @etn-sc/web3-eth-contract
 ```
 
 ## Getting Started
 
--   :writing_hand: If you have questions [submit an issue](https://github.com/ChainSafe/web3.js/issues/new) or join us on [Discord](https://discord.gg/yjyvFRP)
-    ![Discord](https://img.shields.io/discord/593655374469660673.svg?label=Discord&logo=discord)
+-   :writing_hand: If you have questions [submit an issue](https://github.com/electroneum/electroneum-web3.js/issues/new)
 
 ## Prerequisites
 
@@ -44,7 +37,7 @@ yarn add web3-eth-contract
 You can initialize the typesafe Contract API instance with the following.
 
 ```ts
-import { Contract } from 'web3-eth-contract';
+import { Contract } from '@etn-sc/web3-eth-contract';
 
 const abi = [...] as const;
 
@@ -60,7 +53,7 @@ const contract = new Contract(abi);
 
 We have tested the Typescript interface support for the ABIs compiled with solidity version `v0.4.x` and above. If you face any issue regarding the contract typing, please create an issue to report to us.
 
-The Typescript support for fixed length array types are supported up 30 elements. See more details [here](https://github.com/ChainSafe/web3.js/blob/nh%2F4562-contract-typing/packages/web3-eth-abi/src/number_map_type.ts#L1). This limitation is only to provide more performant developer experience in IDEs. In future we may come up with a workaround to avoid this limitation. If you have any idea feel free to share.
+The Typescript support for fixed length array types are supported up 30 elements. See more details [here](https://github.com/electroneum/electroneum-web3.js/blob/nh%2F4562-contract-typing/packages/web3-eth-abi/src/number_map_type.ts#L1). This limitation is only to provide more performant developer experience in IDEs. In future we may come up with a workaround to avoid this limitation. If you have any idea feel free to share.
 
 ## Package.json Scripts
 
@@ -76,7 +69,7 @@ The Typescript support for fixed length array types are supported up 30 elements
 | test:unit        | Uses `jest` to run tests under `/test/unit`        |
 
 [docs]: https://docs.web3js.org/
-[repo]: https://github.com/web3/web3.js/tree/4.x/packages/web3-eth-contract
+[repo]: https://github.com/electroneum/electroneum-web3.js/tree/4.x/packages/web3-eth-contract
 [npm-image]: https://img.shields.io/github/package-json/v/web3/web3.js/4.x?filename=packages%2Fweb3-eth-contract%2Fpackage.json
-[npm-url]: https://npmjs.org/package/web3-eth-contract
+[npm-url]: https://npmjs.org/package/@etn-sc/web3-eth-contract
 [downloads-image]: https://img.shields.io/npm/dm/web3-eth-contract?label=npm%20downloads

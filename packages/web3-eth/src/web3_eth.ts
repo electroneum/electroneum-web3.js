@@ -38,11 +38,11 @@ import {
 	DataFormat,
 	DEFAULT_RETURN_FORMAT,
 	Eip712TypedData,
-} from 'web3-types';
-import { isSupportedProvider, Web3Context, Web3ContextInitOptions } from 'web3-core';
-import { TransactionNotFound } from 'web3-errors';
-import { toChecksumAddress, isNullish } from 'web3-utils';
-import { ethRpcMethods } from 'web3-rpc-methods';
+} from '@etn-sc/web3-types';
+import { isSupportedProvider, Web3Context, Web3ContextInitOptions } from '@etn-sc/web3-core';
+import { TransactionNotFound } from '@etn-sc/web3-errors';
+import { toChecksumAddress, isNullish } from '@etn-sc/web3-utils';
+import { ethRpcMethods } from '@etn-sc/web3-rpc-methods';
 
 import * as rpcMethodsWrappers from './rpc_method_wrappers.js';
 import { SendTransactionOptions } from './types.js';

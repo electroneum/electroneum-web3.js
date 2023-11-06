@@ -14,9 +14,9 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import Web3 from 'web3';
-import { validator } from 'web3-validator';
-import { blockSchema } from 'web3-eth';
+import Web3 from '@etn-sc/web3';
+import { validator } from '@etn-sc/web3-validator';
+import { blockSchema } from '@etn-sc/web3-eth';
 import {
 	closeOpenConnection,
 	getSystemTestProvider,

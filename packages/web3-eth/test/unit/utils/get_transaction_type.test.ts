@@ -15,10 +15,10 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { EthExecutionAPI, Transaction, ETH_DATA_FORMAT } from 'web3-types';
-import HttpProvider from 'web3-providers-http';
-import { Web3Context } from 'web3-core';
-import { format } from 'web3-utils';
+import { EthExecutionAPI, Transaction, ETH_DATA_FORMAT } from '@etn-sc/web3-types';
+import HttpProvider from '@etn-sc/web3-providers-http';
+import { Web3Context } from '@etn-sc/web3-core';
+import { format } from '@etn-sc/web3-utils';
 
 import { transactionSchema } from '../../../src/schemas';
 import { getTransactionType } from '../../../src/utils/transaction_builder';

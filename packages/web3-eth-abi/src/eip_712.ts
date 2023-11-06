@@ -19,8 +19,8 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
  * @note This code was taken from: https://github.com/Mrtenz/eip-712/tree/master
  */
 
-import { Eip712TypedData } from 'web3-types';
-import { isNullish, keccak256 } from 'web3-utils';
+import { Eip712TypedData } from '@etn-sc/web3-types';
+import { isNullish, keccak256 } from '@etn-sc/web3-utils';
 import { encodeParameters } from './coders/encode.js';
 
 const TYPE_REGEX = /^\w+/;

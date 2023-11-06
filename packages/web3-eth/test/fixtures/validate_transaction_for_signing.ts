@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Transaction, FMT_BYTES, FMT_NUMBER, FormatType } from 'web3-types';
+import { Transaction, FMT_BYTES, FMT_NUMBER, FormatType } from '@etn-sc/web3-types';
 import {
 	ChainIdMismatchError,
 	CommonOrChainAndHardforkError,
@@ -29,7 +29,7 @@ import {
 	MissingGasError,
 	TransactionGasMismatchError,
 	UnsupportedFeeMarketError,
-} from 'web3-errors';
+} from '@etn-sc/web3-errors';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 export const invalidTransactionObject: any[] = ['42', false, '0x0', BigInt(42), () => {}];

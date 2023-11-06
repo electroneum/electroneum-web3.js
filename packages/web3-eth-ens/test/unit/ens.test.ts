@@ -15,9 +15,9 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Web3Context, Web3ContextObject, Web3PromiEvent } from 'web3-core';
-import { ENSNetworkNotSyncedError, ENSUnsupportedNetworkError } from 'web3-errors';
-import { Contract } from 'web3-eth-contract';
+import { Web3Context, Web3ContextObject, Web3PromiEvent } from '@etn-sc/web3-core';
+import { ENSNetworkNotSyncedError, ENSUnsupportedNetworkError } from '@etn-sc/web3-errors';
+import { Contract } from '@etn-sc/web3-eth-contract';
 import { PublicResolverAbi } from '../../src/abi/ens/PublicResolver';
 import { registryAddresses } from '../../src/config';
 
@@ -25,20 +25,20 @@ import { ENS } from '../../src/ens';
 
 jest.useFakeTimers().setSystemTime(new Date('2020-01-01'));
 
-jest.mock('web3-eth', () => ({
+jest.mock('@etn-sc/web3-eth', () => ({
 	__esModule: true,
 	isSyncing: jest.fn(),
 }));
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-var-requires
-const { isSyncing } = require('web3-eth');
+const { isSyncing } = require('@etn-sc/web3-eth');
 
 const expectedNetworkId = '0x1';
-jest.mock('web3-net', () => ({
+jest.mock('@etn-sc/web3-net', () => ({
 	getId: jest.fn(),
 }));
 // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-var-requires
-const { getId } = require('web3-net');
+const { getId } = require('@etn-sc/web3-net');
 
 describe('ens', () => {
 	let object: Web3ContextObject;

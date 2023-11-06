@@ -15,8 +15,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /* eslint-disable import/no-relative-packages */
-import Web3 from 'web3';
-import Contract from 'web3-eth-contract';
+import Web3 from '@etn-sc/web3';
+import Contract from '@etn-sc/web3-eth-contract';
 
 import {
 	closeOpenConnection,

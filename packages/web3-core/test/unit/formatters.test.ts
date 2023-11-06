@@ -15,9 +15,9 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import * as utils from 'web3-utils';
-import { BlockTags } from 'web3-types';
-import { Iban } from 'web3-eth-iban';
+import * as utils from '@etn-sc/web3-utils';
+import { BlockTags } from '@etn-sc/web3-types';
+import { Iban } from '@etn-sc/web3-eth-iban';
 import {
 	inputAddressFormatter,
 	inputBlockNumberFormatter,
@@ -36,8 +36,8 @@ import {
 import * as formatters from '../../src/formatters';
 
 /* eslint-disable deprecation/deprecation */
-jest.mock('web3-eth-iban');
-jest.mock('web3-utils');
+jest.mock('@etn-sc/web3-eth-iban');
+jest.mock('@etn-sc/web3-utils');
 
 describe('formatters', () => {
 	const toNumberResult = 12345;

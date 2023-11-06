@@ -20,10 +20,10 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
  *
  * To use this package standalone and use its methods use:
  * ```ts
- * import { Web3Context } from 'web3-core';
- * import { BlockTags } from 'web3-types';
- * import { DEFAULT_RETURN_FORMAT } from 'web3-types';
- * import { getBalance} from 'web3-eth';
+ * import { Web3Context } from '@etn-sc/web3-core';
+ * import { BlockTags } from '@etn-sc/web3-types';
+ * import { DEFAULT_RETURN_FORMAT } from '@etn-sc/web3-types';
+ * import { getBalance} from '@etn-sc/web3-eth';
  *
  * getBalance(
  *      new Web3Context('http://127.0.0.1:8545'),
@@ -36,7 +36,7 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
  *
  * To use this package within the `web3` object use:
  * ```ts
- * import Web3 from 'web3';
+ * import Web3 from '@etn-sc/web3';
  *
  * const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546');
  * web3.eth.getBalance('0x407d73d8a49eeb85d32cf465507dd71d507100c1').then(console.log);

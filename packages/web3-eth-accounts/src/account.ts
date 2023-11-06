@@ -33,7 +33,7 @@ import {
 	PrivateKeyLengthError,
 	TransactionSigningError,
 	UndefinedRawTransactionError,
-} from 'web3-errors';
+} from '@etn-sc/web3-errors';
 import {
 	Address,
 	Bytes,
@@ -43,7 +43,7 @@ import {
 	PBKDF2SHA256Params,
 	ScryptParams,
 	Transaction,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 import {
 	bytesToUint8Array,
 	bytesToHex,
@@ -56,9 +56,9 @@ import {
 	uint8ArrayConcat,
 	utf8ToHex,
 	uuidV4,
-} from 'web3-utils';
+} from '@etn-sc/web3-utils';
 
-import { isHexStrict, isNullish, isString, validator } from 'web3-validator';
+import { isHexStrict, isNullish, isString, validator } from '@etn-sc/web3-validator';
 import { secp256k1 } from './tx/constants.js';
 import { keyStoreSchema } from './schemas.js';
 import { TransactionFactory } from './tx/transactionFactory.js';

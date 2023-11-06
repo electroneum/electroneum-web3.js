@@ -16,13 +16,13 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Contract, PayableTxOptions } from 'web3-eth-contract';
-import { sha3 } from 'web3-utils';
-import { getBlock } from 'web3-eth';
+import { Contract, PayableTxOptions } from '@etn-sc/web3-eth-contract';
+import { sha3 } from '@etn-sc/web3-utils';
+import { getBlock } from '@etn-sc/web3-eth';
 
-import { Address, Bytes, DEFAULT_RETURN_FORMAT } from 'web3-types';
+import { Address, Bytes, DEFAULT_RETURN_FORMAT } from '@etn-sc/web3-types';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { IpcProvider } from 'web3-providers-ipc';
+import { IpcProvider } from '@etn-sc/web3-providers-ipc';
 import { ENS } from '../../src';
 import { namehash } from '../../src/utils';
 

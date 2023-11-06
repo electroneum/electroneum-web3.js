@@ -22,10 +22,10 @@ import {
 	SupportedProviders,
 	FMT_BYTES,
 	FMT_NUMBER,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Contract, decodeEventABI } from 'web3-eth-contract';
-import { hexToNumber, hexToString, numberToHex, getStorageSlotNumForLongString } from 'web3-utils';
+import { Contract, decodeEventABI } from '@etn-sc/web3-eth-contract';
+import { hexToNumber, hexToString, numberToHex, getStorageSlotNumForLongString } from '@etn-sc/web3-utils';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Web3Eth } from '../../src';
 

@@ -15,14 +15,14 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import * as eth from 'web3-eth';
-import * as ethAccounts from 'web3-eth-accounts';
-import { SignTransactionResult, Web3Account } from 'web3-eth-accounts';
+import * as eth from '@etn-sc/web3-eth';
+import * as ethAccounts from '@etn-sc/web3-eth-accounts';
+import { SignTransactionResult, Web3Account } from '@etn-sc/web3-eth-accounts';
 import { Web3EthInterface } from '../../src/types';
 import { Web3 } from '../../src';
 
-jest.mock('web3-eth-accounts');
-jest.mock('web3-eth');
+jest.mock('@etn-sc/web3-eth-accounts');
+jest.mock('@etn-sc/web3-eth');
 
 describe('test new Web3().eth.accounts', () => {
 	let accounts: Web3EthInterface['accounts'];

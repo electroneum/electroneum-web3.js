@@ -25,7 +25,7 @@ import {
 	InvalidSizeError,
 	InvalidStringError,
 	InvalidUnsignedIntegerError,
-} from 'web3-errors';
+} from '@etn-sc/web3-errors';
 import {
 	Bytes,
 	EncodingTypes,
@@ -33,8 +33,8 @@ import {
 	Sha3Input,
 	TypedObject,
 	TypedObjectAbbreviated,
-} from 'web3-types';
-import { isAddress, isNullish, isHexStrict } from 'web3-validator';
+} from '@etn-sc/web3-types';
+import { isAddress, isNullish, isHexStrict } from '@etn-sc/web3-validator';
 import {
 	bytesToUint8Array,
 	bytesToHex,

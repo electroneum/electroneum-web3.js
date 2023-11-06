@@ -14,12 +14,12 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { Bytes, EthExecutionAPI, TransactionReceipt } from 'web3-types';
-import { Web3Context, Web3PromiEvent } from 'web3-core';
-import { format, numberToHex } from 'web3-utils';
-import { ethRpcMethods } from 'web3-rpc-methods';
+import { Bytes, EthExecutionAPI, TransactionReceipt } from '@etn-sc/web3-types';
+import { Web3Context, Web3PromiEvent } from '@etn-sc/web3-core';
+import { format, numberToHex } from '@etn-sc/web3-utils';
+import { ethRpcMethods } from '@etn-sc/web3-rpc-methods';
 
-import { DataFormat } from 'web3-types';
+import { DataFormat } from '@etn-sc/web3-types';
 import { SendSignedTransactionEvents, SendTransactionEvents } from '../types.js';
 import { transactionReceiptSchema } from '../schemas.js';
 

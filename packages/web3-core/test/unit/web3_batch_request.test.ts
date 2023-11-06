@@ -15,9 +15,9 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { JsonRpcBatchRequest, JsonRpcBatchResponse, JsonRpcOptionalRequest } from 'web3-types';
-import { jsonRpc, Web3DeferredPromise, Timeout } from 'web3-utils';
-import { OperationAbortError, OperationTimeoutError } from 'web3-errors';
+import { JsonRpcBatchRequest, JsonRpcBatchResponse, JsonRpcOptionalRequest } from '@etn-sc/web3-types';
+import { jsonRpc, Web3DeferredPromise, Timeout } from '@etn-sc/web3-utils';
+import { OperationAbortError, OperationTimeoutError } from '@etn-sc/web3-errors';
 import { Web3BatchRequest } from '../../src/web3_batch_request';
 
 describe('Web3BatchRequest', () => {

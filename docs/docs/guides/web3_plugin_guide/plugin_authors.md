@@ -41,14 +41,14 @@ Furthermore, you have the flexibility to expand your range of transaction types,
 
 ```typescript
 // create new TransactionType class which extends BaseTransaction class
-import { BaseTransaction } from 'web3-eth-accounts';
+import { BaseTransaction } from '@etn-sc/web3-eth-accounts';
 const TRANSACTION_TYPE = 15;
 class SomeNewTxTypeTransaction extends BaseTransaction {
     // ...
 }
 
 // create new plugin and add `SomeNewTxTypeTransaction` to the library
-import { Web3EthPluginBase } from 'web3';
+import { Web3EthPluginBase } from '@etn-sc/web3';
 
 class SomeNewTxTypeTransactionPlugin extends Web3PluginBase {
    public pluginNamespace = 'someNewTxTypeTransaction';
@@ -64,7 +64,7 @@ class SomeNewTxTypeTransactionPlugin extends Web3PluginBase {
 Your plugin class should `extend` the `Web3PluginBase` abstract class. This class `extends` [Web3Context](/api/web3-core/class/Web3Context) and when the user registers your plugin with a class, your plugin's `Web3Context` will point to the module's `Web3Context` giving your plugin access to things such as user configured [requestManager](/api/web3-core/class/Web3Context#requestManager) and [accountProvider](/api/web3-core/class/Web3Context#accountProvider).
 
 ```typescript
-import { Web3PluginBase } from 'web3';
+import { Web3PluginBase } from '@etn-sc/web3';
 
 export class CustomRpcMethodsPlugin extends Web3PluginBase { ... }
 ```
@@ -74,7 +74,7 @@ export class CustomRpcMethodsPlugin extends Web3PluginBase { ... }
 In addition to `Web3PluginBase`, you can choose to extend `Web3EthPluginBase` which will provide the [Ethereum JSON RPC API interface](/api/web3-types#EthExecutionAPI), which packages such as `Web3Eth` use, as a generic to your plugin's `requestManager`, giving it type support for the [Ethereum JSON RPC spec](https://ethereum.github.io/execution-apis/api-documentation/). This would be the recommended approach if your plugin makes Ethereum JSON RPC calls directly to a provider using web3's provided `requestManager`.
 
 ```typescript
-import { Web3EthPluginBase } from 'web3';
+import { Web3EthPluginBase } from '@etn-sc/web3';
 
 export class CustomRpcMethodsPlugin extends Web3EthPluginBase { ... }
 ```
@@ -87,7 +87,7 @@ The following represents your plugin code:
 
 ```typescript
 // custom_rpc_methods_plugin.ts
-import { Web3PluginBase } from 'web3';
+import { Web3PluginBase } from '@etn-sc/web3';
 
 export class CustomRpcMethodsPlugin extends Web3PluginBase {
 	public pluginNamespace = 'customRpcMethods';
@@ -102,7 +102,7 @@ The following represents the plugin user's code:
 
 ```typescript
 // registering_a_plugin.ts
-import { Web3Context } from 'web3';
+import { Web3Context } from '@etn-sc/web3';
 
 import { CustomRpcMethodsPlugin } from './custom_rpc_methods_plugin';
 
@@ -117,7 +117,7 @@ await web3Context.customRpcMethods.someMethod();
 Below is an example of `CustomRpcMethodsPlugin` making use of `this.requestManager` which will have access to an Ethereum provider if one was configured by the user. In the event that no `provider` was set by the user, the below code will throw a [ProviderError](/api/web3-errors/class/ProviderError) if `customRpcMethod` was to be called:
 
 ```typescript
-import { Web3PluginBase } from 'web3';
+import { Web3PluginBase } from '@etn-sc/web3';
 
 export class CustomRpcMethodsPlugin extends Web3PluginBase {
 	public pluginNamespace = 'customRpcMethods';
@@ -135,7 +135,7 @@ Below depicts a plugin user's code that does not configure an Ethereum provider,
 
 ```typescript
 // registering_a_plugin.ts
-import { Web3Context } from 'web3';
+import { Web3Context } from '@etn-sc/web3';
 
 import { CustomRpcMethodsPlugin } from './custom_rpc_methods_plugin';
 
@@ -158,7 +158,7 @@ ProviderError: Provider not available. Use `.setProvider` or `.provider=` to ini
 If needed, you can provide an API type (that follows the [Web3ApiSpec](/api/web3-types#Web3APISpec) pattern) as a generic to `Web3PluginBase` that will add type hinting to the `requestManager` when developing your plugin. In the below code, this is the `CustomRpcApi` type that's being passed as `Web3PluginBase<CustomRpcApi>`
 
 ```typescript
-import { Web3PluginBase } from 'web3';
+import { Web3PluginBase } from '@etn-sc/web3';
 
 type CustomRpcApi = {
 	custom_rpc_method_with_parameters: (parameter1: string, parameter2: number) => string;
@@ -185,7 +185,7 @@ There currently exists [an issue](https://github.com/web3/web3.js/issues/5492) w
 A workaround for this issue is available, below is an example of it:
 
 ```typescript
-import { Contract, ContractAbi, Web3Context, Web3PluginBase, types, utils } from 'web3';
+import { Contract, ContractAbi, Web3Context, Web3PluginBase, types, utils } from '@etn-sc/web3';
 
 import { ERC20TokenAbi } from './ERC20Token';
 
@@ -252,7 +252,7 @@ When registering a plugin, you're adding additional methods and/or classes to th
 
 ```typescript
 // custom_rpc_methods_plugin.ts
-import { Web3PluginBase } from 'web3';
+import { Web3PluginBase } from '@etn-sc/web3';
 
 export class CustomRpcMethodsPlugin extends Web3PluginBase {
 	public pluginNamespace = 'customRpcMethods';

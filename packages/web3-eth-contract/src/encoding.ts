@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { format, isNullish, keccak256 } from 'web3-utils';
+import { format, isNullish, keccak256 } from '@etn-sc/web3-utils';
 
 import {
 	AbiConstructorFragment,
@@ -27,7 +27,7 @@ import {
 	FMT_NUMBER,
 	FMT_BYTES,
 	ContractOptions,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 
 import {
 	decodeParameters,
@@ -37,12 +37,12 @@ import {
 	encodeParameters,
 	isAbiConstructorFragment,
 	jsonInterfaceMethodToString,
-} from 'web3-eth-abi';
+} from '@etn-sc/web3-eth-abi';
 
-import { blockSchema, ALL_EVENTS } from 'web3-eth';
-import { Web3ContractError } from 'web3-errors';
+import { blockSchema, ALL_EVENTS } from '@etn-sc/web3-eth';
+import { Web3ContractError } from '@etn-sc/web3-errors';
 
-export { decodeEventABI } from 'web3-eth';
+export { decodeEventABI } from '@etn-sc/web3-eth';
 
 type Writeable<T> = { -readonly [P in keyof T]: T[P] };
 export const encodeEventABI = (

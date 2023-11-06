@@ -15,9 +15,9 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { ValidChains, Hardfork, TransactionReceipt } from 'web3-types';
-import * as Web3Eth from 'web3-eth';
-import { TransactionBlockTimeoutError } from 'web3-errors';
+import { ValidChains, Hardfork, TransactionReceipt } from '@etn-sc/web3-types';
+import * as Web3Eth from '@etn-sc/web3-eth';
+import { TransactionBlockTimeoutError } from '@etn-sc/web3-errors';
 import { Contract } from '../../src';
 import { GreeterBytecode, GreeterAbi } from '../shared_fixtures/build/Greeter';
 import {
@@ -32,8 +32,8 @@ import {
 type Resolve = (value?: unknown) => void;
 const MAX_32_SIGNED_INTEGER = 2147483647;
 
-jest.mock('web3-eth', () => {
-	const original = jest.requireActual('web3-eth');
+jest.mock('@etn-sc/web3-eth', () => {
+	const original = jest.requireActual('@etn-sc/web3-eth');
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 	return {
 		...original,

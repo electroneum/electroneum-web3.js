@@ -16,19 +16,19 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { format, SocketProvider } from 'web3-utils';
+import { format, SocketProvider } from '@etn-sc/web3-utils';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import {
 	create as _createAccount,
 	decrypt,
 	privateKeyToAccount,
 	signTransaction,
-} from 'web3-eth-accounts';
+} from '@etn-sc/web3-eth-accounts';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { prepareTransactionForSigning, Web3Eth } from 'web3-eth';
+import { prepareTransactionForSigning, Web3Eth } from '@etn-sc/web3-eth';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Web3Context } from 'web3-core';
+import { Web3Context } from '@etn-sc/web3-core';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import {
@@ -46,18 +46,18 @@ import {
 	SupportedProviders,
 	Web3APISpec,
 	Web3EthExecutionAPI,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Personal } from 'web3-eth-personal';
+import { Personal } from '@etn-sc/web3-eth-personal';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import Web3 from 'web3';
+import Web3 from '@etn-sc/web3';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { NonPayableMethodObject } from 'web3-eth-contract';
+import { NonPayableMethodObject } from '@etn-sc/web3-eth-contract';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import HttpProvider from 'web3-providers-http';
+import HttpProvider from '@etn-sc/web3-providers-http';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { IpcProvider } from 'web3-providers-ipc';
+import { IpcProvider } from '@etn-sc/web3-providers-ipc';
 import accountsString from './accounts.json';
 
 /**

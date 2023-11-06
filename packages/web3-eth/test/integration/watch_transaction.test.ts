@@ -14,11 +14,11 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { SupportedProviders, TransactionReceipt, DEFAULT_RETURN_FORMAT } from 'web3-types';
-import { Web3PromiEvent } from 'web3-core';
-import { Web3Account } from 'web3-eth-accounts';
+import { SupportedProviders, TransactionReceipt, DEFAULT_RETURN_FORMAT } from '@etn-sc/web3-types';
+import { Web3PromiEvent } from '@etn-sc/web3-core';
+import { Web3Account } from '@etn-sc/web3-eth-accounts';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Web3 } from 'web3';
+import { Web3 } from '@etn-sc/web3';
 import { SendTransactionEvents } from '../../src';
 import {
 	getSystemTestProvider,
