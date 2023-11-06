@@ -1,7 +1,7 @@
 {
-	"name": "web3-eth-accounts",
+	"name": "@etn-sc/web3-eth-accounts",
 	"version": "4.1.0",
-	"description": "Package for managing Ethereum accounts and signing",
+	"description": "Package for managing Electroneum accounts and signing",
 	"main": "./lib/commonjs/index.js",
 	"module": "./lib/esm/index.js",
 	"exports": {
@@ -11,8 +11,8 @@
 			"require": "./lib/commonjs/index.js"
 		}
 	},
-	"repository": "https://github.com/ChainSafe/web3.js",
-	"author": "ChainSafe Systems",
+	"repository": "https://github.com/electroneum/electroneum-web3.js",
+	"author": "Electroneum & ChainSafe Systems",
 	"license": "LGPL-3.0",
 	"engines": {
 		"node": ">=14",
