@@ -1,7 +1,7 @@
 {
-	"name": "web3-eth-personal",
+	"name": "@etn-sc/web3-eth-personal",
 	"version": "4.0.8",
-	"description": "Web3 module to interact with the Ethereum blockchain accounts stored in the node.",
+	"description": "Web3 module to interact with the Electroneum blockchain accounts stored in the node.",
 	"main": "./lib/commonjs/index.js",
 	"module": "./lib/esm/index.js",
 	"exports": {
@@ -11,8 +11,8 @@
 			"require": "./lib/commonjs/index.js"
 		}
 	},
-	"repository": "https://github.com/ChainSafe/web3.js",
-	"author": "ChainSafe Systems",
+	"repository": "https://github.com/electroneum/electroneum-web3.js",
+	"author": "Electroneum & ChainSafe Systems",
 	"license": "LGPL-3.0",
 	"engines": {
 		"node": ">=14",
@@ -42,12 +42,12 @@
 		"test:integration": "jest --config=./test/integration/jest.config.js"
 	},
 	"dependencies": {
-		"web3-core": "^4.3.0",
-		"web3-eth": "^4.3.1",
-		"web3-rpc-methods": "^1.1.3",
-		"web3-types": "^1.3.0",
-		"web3-utils": "^4.0.7",
-		"web3-validator": "^2.0.3"
+		"@etn-sc/web3-core": "^4.3.0",
+		"@etn-sc/web3-eth": "^4.3.1",
+		"@etn-sc/web3-rpc-methods": "^1.1.3",
+		"@etn-sc/web3-types": "^1.3.0",
+		"@etn-sc/web3-utils": "^4.0.7",
+		"@etn-sc/web3-validator": "^2.0.3"
 	},
 	"devDependencies": {
 		"@types/jest": "^28.1.6",
@@ -62,6 +62,6 @@
 		"prettier": "^2.7.1",
 		"ts-jest": "^28.0.7",
 		"typescript": "^4.7.4",
-		"web3-providers-ws": "^4.0.7"
+		"@etn-sc/web3-providers-ws": "^4.0.7"
 	}
 }

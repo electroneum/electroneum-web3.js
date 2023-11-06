@@ -9,13 +9,13 @@
 [![NPM Package][npm-image]][npm-url]
 [![Downloads][downloads-image]][npm-url]
 
-This is a sub-package of [electroneum-web3.js][repo].
+This is a sub-package of [@etn-sc/electroneum-web3.js][repo].
 
-`web3-eth-accounts` contains functionality for managing Ethereum accounts and signing.
+`@etn-sc/web3-eth-accounts` contains functionality for managing Electroneum Smart Chain accounts and signing.
 
 ## Installation
 
-You can install the package either using [NPM](https://www.npmjs.com/package/@etn-sc/web3-eth-accounts)
+You can install the package using [NPM](https://www.npmjs.com/package/@etn-sc/web3-eth-accounts)
 
 ### Using NPM
 
@@ -25,8 +25,7 @@ npm install @etn-sc/web3-eth-accounts
 
 ## Getting Started
 
--   :writing_hand: If you have questions [submit an issue](https://github.com/electroneum/electroneum-web3.js/issues/new) or join us on [Discord](https://discord.gg/yjyvFRP)
-    ![Discord](https://img.shields.io/discord/593655374469660673.svg?label=Discord&logo=discord)
+-   :writing_hand: If you have questions [submit an issue](https://github.com/electroneum/electroneum-web3.js/issues/new)
 
 ## Prerequisites
 

@@ -1,5 +1,5 @@
 {
-	"name": "web3-providers-ws",
+	"name": "@etn-sc/web3-providers-ws",
 	"version": "4.0.7",
 	"description": "Websocket provider for Web3 4.x.x",
 	"main": "./lib/commonjs/index.js",
@@ -11,8 +11,8 @@
 			"require": "./lib/commonjs/index.js"
 		}
 	},
-	"repository": "https://github.com/ChainSafe/web3.js",
-	"author": "ChainSafe Systems",
+	"repository": "https://github.com/electroneum/electroneum-web3.js",
+	"author": "Electroneum & ChainSafe Systems",
 	"license": "LGPL-3.0",
 	"engines": {
 		"node": ">=14",
@@ -63,9 +63,9 @@
 	"dependencies": {
 		"@types/ws": "8.5.3",
 		"isomorphic-ws": "^5.0.0",
-		"web3-errors": "^1.1.3",
-		"web3-types": "^1.3.0",
-		"web3-utils": "^4.0.7",
+		"@etn-sc/web3-errors": "^1.1.3",
+		"@etn-sc/web3-types": "^1.3.0",
+		"@etn-sc/web3-utils": "^4.0.7",
 		"ws": "^8.8.1"
 	}
 }
