@@ -30,7 +30,7 @@ import {
 import { transactionReceiptSchema } from '../../../src/schemas';
 import { sleep } from '../../shared_fixtures/utils';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 jest.mock('../../../src/utils/wait_for_transaction_receipt');
 
 const mockBlockData = {

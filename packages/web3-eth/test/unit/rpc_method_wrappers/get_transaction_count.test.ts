@@ -29,7 +29,7 @@ import { ethRpcMethods } from '@etn-sc/web3-rpc-methods';
 import { getTransactionCount } from '../../../src/rpc_method_wrappers';
 import { mockRpcResponse, testData } from './fixtures/get_transaction_count';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 
 describe('getTransactionCount', () => {
 	let web3Context: Web3Context<Web3EthExecutionAPI>;

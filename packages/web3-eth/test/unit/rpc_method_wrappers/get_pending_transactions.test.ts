@@ -22,7 +22,7 @@ import { getPendingTransactions } from '../../../src/rpc_method_wrappers';
 import { formatTransaction } from '../../../src';
 import { mockRpcResponse } from './fixtures/get_pending_transactions';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 
 describe('getPendingTransactions', () => {
 	let web3Context: Web3Context<Web3EthExecutionAPI>;

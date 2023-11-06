@@ -36,8 +36,8 @@ import {
 import * as formatters from '../../src/formatters';
 
 /* eslint-disable deprecation/deprecation */
-jest.mock('web3-eth-iban');
-jest.mock('web3-utils');
+jest.mock('@etn-sc/web3-eth-iban');
+jest.mock('@etn-sc/web3-utils');
 
 describe('formatters', () => {
 	const toNumberResult = 12345;

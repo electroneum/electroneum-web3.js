@@ -1,5 +1,5 @@
-const { Personal } = require('web3-eth-personal');
-const { Web3Eth } = require('web3-eth');
+const { Personal } = require('@etn-sc/web3-eth-personal');
+const { Web3Eth } = require('@etn-sc/web3-eth');
 const tempAccountList = require('./accounts.json');
 
 const getEnvVar = name => (global.Cypress ? Cypress.env(name) : process.env[name]);

@@ -32,7 +32,7 @@ import {
 } from './fixtures/send_transaction';
 import { transactionReceiptSchema } from '../../../src/schemas';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 jest.mock('../../../src/utils/wait_for_transaction_receipt');
 jest.mock('../../../src/utils/watch_transaction_for_confirmations');
 

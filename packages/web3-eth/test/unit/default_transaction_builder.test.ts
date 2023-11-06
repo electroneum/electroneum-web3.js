@@ -34,9 +34,9 @@ import {
 } from '@etn-sc/web3-errors';
 import { defaultTransactionBuilder } from '../../src/utils/transaction_builder';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 const expectedNetworkId = '0x4';
-jest.mock('web3-net', () => ({
+jest.mock('@etn-sc/web3-net', () => ({
 	getId: jest.fn().mockImplementation(() => expectedNetworkId),
 }));
 

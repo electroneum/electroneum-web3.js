@@ -29,9 +29,9 @@ import { erc721Abi } from '../fixtures/erc721';
 import { ERC20TokenAbi } from '../shared_fixtures/build/ERC20Token';
 import { processAsync } from '../shared_fixtures/utils';
 
-jest.mock('web3-eth', () => {
-	const allAutoMocked = jest.createMockFromModule('web3-eth');
-	const actual = jest.requireActual('web3-eth');
+jest.mock('@etn-sc/web3-eth', () => {
+	const allAutoMocked = jest.createMockFromModule('@etn-sc/web3-eth');
+	const actual = jest.requireActual('@etn-sc/web3-eth');
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 	return {
 		__esModules: true,

@@ -20,7 +20,7 @@ import { Web3Account } from '@etn-sc/web3-eth-accounts';
 import Web3, { DEFAULT_RETURN_FORMAT, Transaction } from '../../src';
 import testsData from '../fixtures/transactions.json';
 
-jest.mock('web3-providers-http');
+jest.mock('@etn-sc/web3-providers-http');
 
 describe('signTransaction', () => {
 	let blockNum = 1;

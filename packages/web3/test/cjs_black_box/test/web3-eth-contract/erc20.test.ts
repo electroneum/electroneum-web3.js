@@ -31,7 +31,7 @@ import {
 } from '../../../shared_fixtures/contracts/ERC20Token';
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-var-requires
-const Web3 = require('web3').default;
+const Web3 = require('@etn-sc/web3').default;
 
 describeIf(getSystemTestBackend() === 'infura')(
 	'CJS - Black Box Unit Tests - web3.eth.Contract',

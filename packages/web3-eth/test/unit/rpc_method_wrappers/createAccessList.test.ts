@@ -24,7 +24,7 @@ import { createAccessList } from '../../../src/rpc_method_wrappers';
 import { mockRpcResponse, testData } from './fixtures/createAccessList';
 import { formatTransaction } from '../../../src';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 
 describe('createAccessList', () => {
 	let web3Context: Web3Context<Web3EthExecutionAPI>;

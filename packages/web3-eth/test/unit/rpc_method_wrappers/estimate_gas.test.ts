@@ -30,7 +30,7 @@ import { estimateGas } from '../../../src/rpc_method_wrappers';
 import { mockRpcResponse, testData } from './fixtures/estimate_gas';
 import { formatTransaction } from '../../../src';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 
 describe('call', () => {
 	let web3Context: Web3Context<Web3EthExecutionAPI>;

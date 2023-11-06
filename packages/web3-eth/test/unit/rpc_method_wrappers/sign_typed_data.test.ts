@@ -22,7 +22,7 @@ import { format } from '@etn-sc/web3-utils';
 import { signTypedData } from '../../../src/rpc_method_wrappers';
 import { testData, mockRpcResponse } from './fixtures/sign_typed_data';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 
 describe('signTypedData', () => {
 	let web3Context: Web3Context<Web3EthExecutionAPI>;

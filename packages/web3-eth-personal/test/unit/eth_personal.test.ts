@@ -21,9 +21,9 @@ import * as eth from '@etn-sc/web3-eth';
 import * as validator from '@etn-sc/web3-validator';
 import { Personal } from '../../src/index';
 
-jest.mock('web3-utils');
-jest.mock('web3-eth');
-jest.mock('web3-validator');
+jest.mock('@etn-sc/web3-utils');
+jest.mock('@etn-sc/web3-eth');
+jest.mock('@etn-sc/web3-validator');
 describe('Personal', () => {
 	let personal: Personal;
 	let sendSpy: jest.SpyInstance;

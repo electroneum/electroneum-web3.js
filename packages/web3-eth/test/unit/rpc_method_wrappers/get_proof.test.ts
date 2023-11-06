@@ -30,7 +30,7 @@ import { getProof } from '../../../src/rpc_method_wrappers';
 import { mockRpcResponse, testData } from './fixtures/get_proof';
 import { accountSchema } from '../../../src/schemas';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 
 describe('getProof', () => {
 	let web3Context: Web3Context<Web3EthExecutionAPI>;

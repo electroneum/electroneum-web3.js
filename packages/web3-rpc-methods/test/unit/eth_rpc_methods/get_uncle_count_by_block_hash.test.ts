@@ -34,7 +34,7 @@ import { validator } from '@etn-sc/web3-validator';
 import { ethRpcMethods } from '../../../src/index';
 import { testData } from './fixtures/get_uncle_count_by_block_hash';
 
-jest.mock('web3-validator');
+jest.mock('@etn-sc/web3-validator');
 
 describe('getUncleCountByBlockHash', () => {
 	let requestManagerSendSpy: jest.Mock;

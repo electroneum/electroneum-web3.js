@@ -22,7 +22,7 @@ import * as rpcMethodWrappers from '../../src/rpc_method_wrappers';
 import { getPastLogsValidFormatData } from '../fixtures/web3_eth_methods_with_parameters';
 import Web3Eth from '../../src/index';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 describe('web3_eth_methods formatting', () => {
 	let web3Eth: Web3Eth;
 

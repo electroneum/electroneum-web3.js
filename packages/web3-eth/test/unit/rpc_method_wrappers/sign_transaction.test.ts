@@ -28,7 +28,7 @@ import { signTransaction } from '../../../src/rpc_method_wrappers';
 import { returnFormat, testData } from './fixtures/sign_transaction';
 import { formatTransaction } from '../../../src';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 
 describe('signTransaction', () => {
 	let web3Context: Web3Context<Web3EthExecutionAPI>;

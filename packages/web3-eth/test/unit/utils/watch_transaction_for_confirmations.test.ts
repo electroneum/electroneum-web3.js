@@ -36,7 +36,7 @@ import {
 import { transactionReceiptSchema } from '../../../src/schemas';
 import { SendSignedTransactionEvents } from '../../../src/types';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 jest.mock('../../../src/utils/wait_for_transaction_receipt');
 jest.mock('../../../src/utils/watch_transaction_by_pooling');
 jest.mock('../../../src/utils/watch_transaction_by_subscription');

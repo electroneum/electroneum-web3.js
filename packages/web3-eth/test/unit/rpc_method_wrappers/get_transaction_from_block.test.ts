@@ -31,7 +31,7 @@ import { getTransactionFromBlock } from '../../../src/rpc_method_wrappers';
 import { mockRpcResponse, testData } from './fixtures/get_transaction_from_block';
 import { formatTransaction, transactionInfoSchema } from '../../../src';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 
 describe('getTransactionFromBlock', () => {
 	let web3Context: Web3Context<Web3EthExecutionAPI>;

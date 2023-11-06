@@ -30,7 +30,7 @@ import {
 import { transactionReceiptSchema } from '../../../src/schemas';
 import { SendTxHelper } from '../../../src/utils/send_tx_helper';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 jest.mock('../../../src/utils/wait_for_transaction_receipt');
 jest.mock('../../../src/utils/watch_transaction_for_confirmations');
 

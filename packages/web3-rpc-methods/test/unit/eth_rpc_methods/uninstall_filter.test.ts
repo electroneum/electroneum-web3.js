@@ -34,7 +34,7 @@ import { validator } from '@etn-sc/web3-validator';
 import { ethRpcMethods } from '../../../src/index';
 import { testData } from './fixtures/uninstall_filter';
 
-jest.mock('web3-validator');
+jest.mock('@etn-sc/web3-validator');
 
 describe('uninstallFilter', () => {
 	let requestManagerSendSpy: jest.Mock;

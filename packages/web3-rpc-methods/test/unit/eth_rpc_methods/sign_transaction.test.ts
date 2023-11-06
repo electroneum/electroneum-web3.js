@@ -34,7 +34,7 @@ import { validator } from '@etn-sc/web3-validator';
 import { ethRpcMethods } from '../../../src/index';
 import { testData } from './fixtures/sign_transaction';
 
-jest.mock('web3-validator');
+jest.mock('@etn-sc/web3-validator');
 
 describe('signTransaction', () => {
 	let requestManagerSendSpy: jest.Mock;

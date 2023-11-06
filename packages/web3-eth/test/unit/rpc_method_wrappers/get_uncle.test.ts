@@ -31,7 +31,7 @@ import { getUncle } from '../../../src/rpc_method_wrappers';
 import { mockRpcResponse, testData } from './fixtures/get_uncle';
 import { blockSchema } from '../../../src/schemas';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 
 describe('getUncle', () => {
 	let web3Context: Web3Context<Web3EthExecutionAPI>;

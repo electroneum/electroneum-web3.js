@@ -21,8 +21,8 @@ import { SignTransactionResult, Web3Account } from '@etn-sc/web3-eth-accounts';
 import { Web3EthInterface } from '../../src/types';
 import { Web3 } from '../../src';
 
-jest.mock('web3-eth-accounts');
-jest.mock('web3-eth');
+jest.mock('@etn-sc/web3-eth-accounts');
+jest.mock('@etn-sc/web3-eth');
 
 describe('test new Web3().eth.accounts', () => {
 	let accounts: Web3EthInterface['accounts'];

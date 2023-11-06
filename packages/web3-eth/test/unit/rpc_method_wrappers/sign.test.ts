@@ -24,7 +24,7 @@ import { mockRpcResponse, testData, walletTestData } from './fixtures/sign';
 import { createAccountProvider } from '../../fixtures/system_test_utils';
 import { SignatureObjectSchema } from '../../../src/schemas';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 
 describe('sign', () => {
 	let web3Context: Web3Context<Web3EthExecutionAPI>;

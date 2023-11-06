@@ -35,7 +35,7 @@ import { validator } from '@etn-sc/web3-validator';
 import { ethRpcMethods } from '../../../src/index';
 import { testData } from './fixtures/estimate_gas';
 
-jest.mock('web3-validator');
+jest.mock('@etn-sc/web3-validator');
 
 describe('estimateGas', () => {
 	let requestManagerSendSpy: jest.Mock;

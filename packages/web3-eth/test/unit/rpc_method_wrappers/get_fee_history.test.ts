@@ -31,7 +31,7 @@ import { mockRpcResponse, testData } from './fixtures/get_fee_history';
 import { feeHistorySchema } from '../../../src/schemas';
 import { NUMBER_DATA_FORMAT } from '../../../src/constants';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 
 describe('getFeeHistory', () => {
 	let web3Context: Web3Context<Web3EthExecutionAPI>;

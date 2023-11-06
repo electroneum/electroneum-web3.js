@@ -32,8 +32,8 @@ import {
 type Resolve = (value?: unknown) => void;
 const MAX_32_SIGNED_INTEGER = 2147483647;
 
-jest.mock('web3-eth', () => {
-	const original = jest.requireActual('web3-eth');
+jest.mock('@etn-sc/web3-eth', () => {
+	const original = jest.requireActual('@etn-sc/web3-eth');
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 	return {
 		...original,

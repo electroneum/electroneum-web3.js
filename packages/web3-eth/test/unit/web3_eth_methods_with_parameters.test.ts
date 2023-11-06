@@ -50,7 +50,7 @@ import {
 
 import { testData as createAccessListTestData } from './rpc_method_wrappers/fixtures/createAccessList';
 
-jest.mock('web3-rpc-methods');
+jest.mock('@etn-sc/web3-rpc-methods');
 jest.mock('../../src/rpc_method_wrappers');
 // eslint-disable-next-line @typescript-eslint/no-unsafe-call
 jest.spyOn(rpcMethodWrappers, 'getTransaction').mockResolvedValue(tx as TransactionInfoAPI);
