@@ -14,9 +14,9 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { getEncodedEip712Data } from 'web3-eth-abi';
-import { ecrecover, toUint8Array } from 'web3-eth-accounts';
-import { bytesToHex, hexToNumber, keccak256 } from 'web3-utils';
+import { getEncodedEip712Data } from '@etn-sc/web3-eth-abi';
+import { ecrecover, toUint8Array } from '@etn-sc/web3-eth-accounts';
+import { bytesToHex, hexToNumber, keccak256 } from '@etn-sc/web3-utils';
 
 import Web3Eth from '../../../src';
 import {

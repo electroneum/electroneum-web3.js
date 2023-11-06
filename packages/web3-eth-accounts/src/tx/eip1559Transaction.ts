@@ -15,9 +15,9 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 import { keccak256 } from 'ethereum-cryptography/keccak.js';
-import { validateNoLeadingZeroes } from 'web3-validator';
+import { validateNoLeadingZeroes } from '@etn-sc/web3-validator';
 import { RLP } from '@ethereumjs/rlp';
-import { bytesToHex, hexToBytes, uint8ArrayConcat, uint8ArrayEquals } from 'web3-utils';
+import { bytesToHex, hexToBytes, uint8ArrayConcat, uint8ArrayEquals } from '@etn-sc/web3-utils';
 import { MAX_INTEGER } from './constants.js';
 import { BaseTransaction } from './baseTransaction.js';
 import {

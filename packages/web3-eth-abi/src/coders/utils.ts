@@ -16,9 +16,9 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 import { AbiParameter as ExternalAbiParameter, parseAbiParameter } from 'abitype';
-import { AbiError } from 'web3-errors';
-import { AbiInput, AbiParameter, AbiStruct } from 'web3-types';
-import { isNullish } from 'web3-utils';
+import { AbiError } from '@etn-sc/web3-errors';
+import { AbiInput, AbiParameter, AbiStruct } from '@etn-sc/web3-types';
+import { isNullish } from '@etn-sc/web3-utils';
 import {
 	isSimplifiedStructFormat,
 	mapStructNameAndType,

@@ -15,10 +15,10 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { ETH_DATA_FORMAT } from 'web3-types';
-import * as utils from 'web3-utils';
-import * as eth from 'web3-eth';
-import * as validator from 'web3-validator';
+import { ETH_DATA_FORMAT } from '@etn-sc/web3-types';
+import * as utils from '@etn-sc/web3-utils';
+import * as eth from '@etn-sc/web3-eth';
+import * as validator from '@etn-sc/web3-validator';
 import { Personal } from '../../src/index';
 
 jest.mock('web3-utils');

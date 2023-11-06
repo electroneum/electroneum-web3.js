@@ -14,7 +14,7 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { Numbers } from 'web3-types';
+import { Numbers } from '@etn-sc/web3-types';
 import { toUint8Array, uint8ArrayToBigInt } from '../common/utils.js';
 import { FeeMarketEIP1559Transaction } from './eip1559Transaction.js';
 import { AccessListEIP2930Transaction } from './eip2930Transaction.js';

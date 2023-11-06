@@ -21,23 +21,23 @@ import {
 	Web3ContextObject,
 	Web3SubscriptionConstructor,
 	isSupportedProvider,
-} from 'web3-core';
-import { Web3Eth, RegisteredSubscription, registeredSubscriptions } from 'web3-eth';
-import Contract from 'web3-eth-contract';
-import { ENS, registryAddresses } from 'web3-eth-ens';
-import { Iban } from 'web3-eth-iban';
-import { Personal } from 'web3-eth-personal';
-import { Net } from 'web3-net';
-import * as utils from 'web3-utils';
-import { isNullish } from 'web3-utils';
+} from '@etn-sc/web3-core';
+import { Web3Eth, RegisteredSubscription, registeredSubscriptions } from '@etn-sc/web3-eth';
+import Contract from '@etn-sc/web3-eth-contract';
+import { ENS, registryAddresses } from '@etn-sc/web3-eth-ens';
+import { Iban } from '@etn-sc/web3-eth-iban';
+import { Personal } from '@etn-sc/web3-eth-personal';
+import { Net } from '@etn-sc/web3-net';
+import * as utils from '@etn-sc/web3-utils';
+import { isNullish } from '@etn-sc/web3-utils';
 import {
 	Address,
 	ContractAbi,
 	ContractInitOptions,
 	EthExecutionAPI,
 	SupportedProviders,
-} from 'web3-types';
-import { InvalidMethodParamsError } from 'web3-errors';
+} from '@etn-sc/web3-types';
+import { InvalidMethodParamsError } from '@etn-sc/web3-errors';
 import abi from './abi.js';
 import { initAccountsForContext } from './accounts.js';
 import { Web3EthInterface } from './types.js';

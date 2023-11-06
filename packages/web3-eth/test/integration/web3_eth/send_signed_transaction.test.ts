@@ -27,9 +27,9 @@ import {
 	FMT_BYTES,
 	FMT_NUMBER,
 	DEFAULT_RETURN_FORMAT,
-} from 'web3-types';
-import { format, hexToNumber } from 'web3-utils';
-import { isHexStrict } from 'web3-validator';
+} from '@etn-sc/web3-types';
+import { format, hexToNumber } from '@etn-sc/web3-utils';
+import { isHexStrict } from '@etn-sc/web3-validator';
 import { Web3Eth, InternalTransaction, transactionSchema } from '../../../src';
 import {
 	closeOpenConnection,

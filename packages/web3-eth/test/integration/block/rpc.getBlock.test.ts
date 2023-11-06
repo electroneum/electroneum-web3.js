@@ -20,10 +20,10 @@ import {
 	FMT_BYTES,
 	FMT_NUMBER,
 	SupportedProviders,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Contract } from 'web3-eth-contract';
-import { validator } from 'web3-validator';
+import { Contract } from '@etn-sc/web3-eth-contract';
+import { validator } from '@etn-sc/web3-validator';
 import { Web3Eth } from '../../../src';
 import {
 	getSystemTestProvider,

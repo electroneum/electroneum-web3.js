@@ -14,10 +14,10 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { Web3Context } from 'web3-core';
-import { EthExecutionAPI, Bytes } from 'web3-types';
-import { AsyncFunction, rejectIfTimeout } from 'web3-utils';
-import { TransactionSendTimeoutError } from 'web3-errors';
+import { Web3Context } from '@etn-sc/web3-core';
+import { EthExecutionAPI, Bytes } from '@etn-sc/web3-types';
+import { AsyncFunction, rejectIfTimeout } from '@etn-sc/web3-utils';
+import { TransactionSendTimeoutError } from '@etn-sc/web3-errors';
 
 // eslint-disable-next-line import/no-cycle
 import { rejectIfBlockTimeout } from './reject_if_block_timeout.js';

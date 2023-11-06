@@ -17,7 +17,7 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 
 /* eslint-disable @typescript-eslint/no-magic-numbers */
 
-import { Transaction, TransactionFactory, Web3Account } from 'web3-eth-accounts';
+import { Transaction, TransactionFactory, Web3Account } from '@etn-sc/web3-eth-accounts';
 import { SupportedProviders, Web3, Web3PluginBase } from '../../src';
 import {
 	createAccount,

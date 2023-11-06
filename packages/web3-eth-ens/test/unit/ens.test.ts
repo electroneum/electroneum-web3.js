@@ -15,9 +15,9 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Web3Context, Web3ContextObject, Web3PromiEvent } from 'web3-core';
-import { ENSNetworkNotSyncedError, ENSUnsupportedNetworkError } from 'web3-errors';
-import { Contract } from 'web3-eth-contract';
+import { Web3Context, Web3ContextObject, Web3PromiEvent } from '@etn-sc/web3-core';
+import { ENSNetworkNotSyncedError, ENSUnsupportedNetworkError } from '@etn-sc/web3-errors';
+import { Contract } from '@etn-sc/web3-eth-contract';
 import { PublicResolverAbi } from '../../src/abi/ens/PublicResolver';
 import { registryAddresses } from '../../src/config';
 

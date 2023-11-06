@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-export { Eip1193Provider, SocketProvider } from 'web3-utils';
+export { Eip1193Provider, SocketProvider } from '@etn-sc/web3-utils';
 
-export * as http from 'web3-providers-http';
-export * as ws from 'web3-providers-ws';
+export * as http from '@etn-sc/web3-providers-http';
+export * as ws from '@etn-sc/web3-providers-ws';

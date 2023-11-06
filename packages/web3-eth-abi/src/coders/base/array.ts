@@ -14,9 +14,9 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { AbiError } from 'web3-errors';
-import { AbiParameter } from 'web3-types';
-import { uint8ArrayConcat } from 'web3-utils';
+import { AbiError } from '@etn-sc/web3-errors';
+import { AbiParameter } from '@etn-sc/web3-types';
+import { uint8ArrayConcat } from '@etn-sc/web3-utils';
 // eslint-disable-next-line import/no-cycle
 import { decodeParamFromAbiParameter, encodeNumber, encodeParamFromAbiParameter } from './index.js';
 import { DecoderResult, EncoderResult } from '../types.js';

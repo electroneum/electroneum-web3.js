@@ -14,11 +14,11 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { EthExecutionAPI, Bytes, Web3BaseProvider, BlockHeaderOutput } from 'web3-types';
-import { Web3Context } from 'web3-core';
-import { rejectIfConditionAtInterval } from 'web3-utils';
+import { EthExecutionAPI, Bytes, Web3BaseProvider, BlockHeaderOutput } from '@etn-sc/web3-types';
+import { Web3Context } from '@etn-sc/web3-core';
+import { rejectIfConditionAtInterval } from '@etn-sc/web3-utils';
 
-import { TransactionBlockTimeoutError } from 'web3-errors';
+import { TransactionBlockTimeoutError } from '@etn-sc/web3-errors';
 import { NUMBER_DATA_FORMAT } from '../constants.js';
 // eslint-disable-next-line import/no-cycle
 import { getBlockNumber } from '../rpc_method_wrappers.js';

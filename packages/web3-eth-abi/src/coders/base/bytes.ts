@@ -14,10 +14,10 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { AbiError } from 'web3-errors';
-import { AbiParameter, Bytes } from 'web3-types';
-import { bytesToHex, bytesToUint8Array } from 'web3-utils';
-import { isBytes, ValidInputTypes } from 'web3-validator';
+import { AbiError } from '@etn-sc/web3-errors';
+import { AbiParameter, Bytes } from '@etn-sc/web3-types';
+import { bytesToHex, bytesToUint8Array } from '@etn-sc/web3-utils';
+import { isBytes, ValidInputTypes } from '@etn-sc/web3-validator';
 import { DecoderResult, EncoderResult } from '../types.js';
 import { alloc, WORD_SIZE } from '../utils.js';
 import { decodeNumber, encodeNumber } from './number.js';

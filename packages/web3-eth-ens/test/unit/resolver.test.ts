@@ -15,10 +15,10 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Web3Context, Web3ContextObject } from 'web3-core';
-import { ResolverMethodMissingError } from 'web3-errors';
-import { Contract, NonPayableMethodObject } from 'web3-eth-contract';
-import { sha3 } from 'web3-utils';
+import { Web3Context, Web3ContextObject } from '@etn-sc/web3-core';
+import { ResolverMethodMissingError } from '@etn-sc/web3-errors';
+import { Contract, NonPayableMethodObject } from '@etn-sc/web3-eth-contract';
+import { sha3 } from '@etn-sc/web3-utils';
 import { PublicResolverAbi } from '../../src/abi/ens/PublicResolver';
 import { interfaceIds, methodsInInterface } from '../../src/config';
 import { Registry } from '../../src/registry';

@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { EventEmitter } from 'web3-utils';
+import { EventEmitter } from '@etn-sc/web3-utils';
 
 export default class WebSocket extends EventEmitter {
 	public readyState: number;

@@ -116,24 +116,24 @@ We don't encourage using the `@types/web3` package.
 ```ts
 // Provider types
 // in 1.x
-import type { Provider, Callback, JsonRPCResponse } from 'web3/providers';
+import type { Provider, Callback, JsonRPCResponse } from '@etn-sc/web3/providers';
 
 // in 4.x
 import type {
 	Web3BaseProvider as Provider,
 	Web3ProviderRequestCallback as Callback,
 	JsonRpcResponse,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 ```
 
 Similarly some useable types from the old package `web3-core` are also moved to `web3-types`
 
 ```ts
 // in 1.x
-import type { Transaction, TransactionReceipt } from 'web3-core';
+import type { Transaction, TransactionReceipt } from '@etn-sc/web3-core';
 
 // in 4.x
-import type { Transaction, TransactionReceipt } from 'web3-types';
+import type { Transaction, TransactionReceipt } from '@etn-sc/web3-types';
 ```
 
 ### Web3 Extend
@@ -196,10 +196,10 @@ Starting 4.x releases, the package `web3-core-helpers` will not be maintained an
 
 ```ts
 // in 1.x
-import { formatters } from 'web3-core-helpers';
+import { formatters } from '@etn-sc/web3-core-helpers';
 
 // in 4.x
-import { formatters } from 'web3-core';
+import { formatters } from '@etn-sc/web3-core';
 ```
 
 ### PromiEvent
@@ -208,10 +208,10 @@ Starting 4.x releases, the package `web3-core-promievent` will not be maintained
 
 ```ts
 // in 1.x
-import Web3PromiEvent from 'web3-core-promievent';
+import Web3PromiEvent from '@etn-sc/web3-core-promievent';
 
 // in 4.x
-import { Web3PromiEvent } from 'web3-core';
+import { Web3PromiEvent } from '@etn-sc/web3-core';
 ```
 
 The `PromiEvent` class does not support `removeEventListener` or `addEventListener`. Instead we recommend to use `on` and `off`.

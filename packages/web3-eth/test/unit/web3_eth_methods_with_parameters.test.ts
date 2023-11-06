@@ -14,9 +14,9 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { ethRpcMethods } from 'web3-rpc-methods';
+import { ethRpcMethods } from '@etn-sc/web3-rpc-methods';
 
-import { TransactionInfoAPI } from 'web3-types';
+import { TransactionInfoAPI } from '@etn-sc/web3-types';
 import Web3Eth from '../../src/index';
 import * as rpcMethodWrappers from '../../src/rpc_method_wrappers';
 import {

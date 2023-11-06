@@ -14,7 +14,7 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { toBigInt } from 'web3-utils';
+import { toBigInt } from '@etn-sc/web3-utils';
 import { Chain, Common, Hardfork } from '../../../src/common';
 
 describe('[Common/EIPs]: Initialization / Chain params', () => {

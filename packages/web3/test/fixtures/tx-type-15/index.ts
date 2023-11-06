@@ -15,10 +15,10 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 import { keccak256 } from 'ethereum-cryptography/keccak';
-import { validateNoLeadingZeroes } from 'web3-validator';
+import { validateNoLeadingZeroes } from '@etn-sc/web3-validator';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { RLP } from '@ethereumjs/rlp';
-import { bytesToHex, hexToBytes, uint8ArrayConcat, uint8ArrayEquals } from 'web3-utils';
+import { bytesToHex, hexToBytes, uint8ArrayConcat, uint8ArrayEquals } from '@etn-sc/web3-utils';
 import {
 	BaseTransaction,
 	FeeMarketEIP1559Transaction,
@@ -35,7 +35,7 @@ import {
 	FeeMarketEIP1559ValuesArray,
 	JsonTx,
 	TxOptions,
-} from 'web3-eth-accounts';
+} from '@etn-sc/web3-eth-accounts';
 
 const { getAccessListData, getAccessListJSON, getDataFeeEIP2930, verifyAccessList } = txUtils;
 

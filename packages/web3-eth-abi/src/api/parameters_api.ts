@@ -14,8 +14,8 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { AbiError } from 'web3-errors';
-import { AbiInput, HexString } from 'web3-types';
+import { AbiError } from '@etn-sc/web3-errors';
+import { AbiInput, HexString } from '@etn-sc/web3-types';
 import { decodeParameters as decodeParametersInternal } from '../coders/decode.js';
 import { encodeParameters as encodeParametersInternal } from '../coders/encode.js';
 

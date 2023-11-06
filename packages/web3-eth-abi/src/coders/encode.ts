@@ -14,9 +14,9 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { AbiError } from 'web3-errors';
-import { AbiInput } from 'web3-types';
-import { utils } from 'web3-validator';
+import { AbiError } from '@etn-sc/web3-errors';
+import { AbiInput } from '@etn-sc/web3-types';
+import { utils } from '@etn-sc/web3-validator';
 import { encodeTuple } from './base/index.js';
 import { toAbiParams } from './utils.js';
 

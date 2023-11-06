@@ -15,12 +15,12 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Web3Context } from 'web3-core';
-import { TransactionPollingTimeoutError } from 'web3-errors';
-import { EthExecutionAPI, Bytes, TransactionReceipt, DataFormat } from 'web3-types';
+import { Web3Context } from '@etn-sc/web3-core';
+import { TransactionPollingTimeoutError } from '@etn-sc/web3-errors';
+import { EthExecutionAPI, Bytes, TransactionReceipt, DataFormat } from '@etn-sc/web3-types';
 
 // eslint-disable-next-line import/no-cycle
-import { pollTillDefinedAndReturnIntervalId, rejectIfTimeout } from 'web3-utils';
+import { pollTillDefinedAndReturnIntervalId, rejectIfTimeout } from '@etn-sc/web3-utils';
 // eslint-disable-next-line import/no-cycle
 import { rejectIfBlockTimeout } from './reject_if_block_timeout.js';
 // eslint-disable-next-line import/no-cycle

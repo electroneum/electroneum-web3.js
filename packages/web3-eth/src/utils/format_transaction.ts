@@ -15,10 +15,10 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Transaction, DataFormat, DEFAULT_RETURN_FORMAT, FormatType } from 'web3-types';
-import { isNullish, ValidationSchemaInput } from 'web3-validator';
-import { mergeDeep, format, bytesToHex, toHex } from 'web3-utils';
-import { TransactionDataAndInputError } from 'web3-errors';
+import { Transaction, DataFormat, DEFAULT_RETURN_FORMAT, FormatType } from '@etn-sc/web3-types';
+import { isNullish, ValidationSchemaInput } from '@etn-sc/web3-validator';
+import { mergeDeep, format, bytesToHex, toHex } from '@etn-sc/web3-utils';
+import { TransactionDataAndInputError } from '@etn-sc/web3-errors';
 
 import { transactionInfoSchema, transactionSchema } from '../schemas.js';
 

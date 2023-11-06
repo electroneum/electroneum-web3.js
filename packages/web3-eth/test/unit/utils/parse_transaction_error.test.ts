@@ -14,7 +14,7 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { ContractExecutionError, InvalidResponseError } from 'web3-errors';
+import { ContractExecutionError, InvalidResponseError } from '@etn-sc/web3-errors';
 
 import { parseTransactionError } from '../../../src/utils/get_revert_reason';
 import { SimpleRevertAbi } from '../../fixtures/simple_revert';

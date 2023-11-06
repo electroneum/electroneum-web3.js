@@ -26,9 +26,9 @@ import {
 	TransactionWithFromAndToLocalWalletIndex,
 	Address,
 	DEFAULT_RETURN_FORMAT,
-} from 'web3-types';
-import { Wallet } from 'web3-eth-accounts';
-import { isHexStrict } from 'web3-validator';
+} from '@etn-sc/web3-types';
+import { Wallet } from '@etn-sc/web3-eth-accounts';
+import { isHexStrict } from '@etn-sc/web3-validator';
 
 import Web3Eth from '../../../src';
 import {

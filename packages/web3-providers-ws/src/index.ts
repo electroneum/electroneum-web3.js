@@ -23,9 +23,9 @@ import {
 	Web3APIPayload,
 	Web3APISpec,
 	Web3ProviderStatus,
-} from 'web3-types';
-import { isNullish, ReconnectOptions, SocketProvider } from 'web3-utils';
-import { ConnectionNotOpenError } from 'web3-errors';
+} from '@etn-sc/web3-types';
+import { isNullish, ReconnectOptions, SocketProvider } from '@etn-sc/web3-utils';
+import { ConnectionNotOpenError } from '@etn-sc/web3-errors';
 
 export { ClientRequestArgs } from 'http';
 

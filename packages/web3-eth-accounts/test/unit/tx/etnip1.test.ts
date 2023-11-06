@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 import { RLP } from '@ethereumjs/rlp';
-import { hexToBytes } from 'web3-utils';
+import { hexToBytes } from '@etn-sc/web3-utils';
 import { Chain, Common, Hardfork } from '../../../src/common';
 
 import { PriorityETNIP1Transaction } from '../../../src';

@@ -25,9 +25,9 @@ import {
 	EthExecutionAPI,
 	Web3BaseProvider,
 	Transaction,
-} from 'web3-types';
-import { isNullish } from 'web3-utils';
-import { ExistingPluginNamespaceError } from 'web3-errors';
+} from '@etn-sc/web3-types';
+import { isNullish } from '@etn-sc/web3-utils';
+import { ExistingPluginNamespaceError } from '@etn-sc/web3-errors';
 
 import { isSupportedProvider } from './utils.js';
 // eslint-disable-next-line import/no-cycle

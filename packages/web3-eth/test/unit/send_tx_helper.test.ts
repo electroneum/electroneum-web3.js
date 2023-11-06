@@ -21,13 +21,13 @@ import {
 	JsonRpcResponse,
 	TransactionReceipt,
 	Web3BaseWalletAccount,
-} from 'web3-types';
-import { Web3Context, Web3EventMap, Web3PromiEvent } from 'web3-core';
+} from '@etn-sc/web3-types';
+import { Web3Context, Web3EventMap, Web3PromiEvent } from '@etn-sc/web3-core';
 import {
 	ContractExecutionError,
 	InvalidResponseError,
 	TransactionRevertInstructionError,
-} from 'web3-errors';
+} from '@etn-sc/web3-errors';
 import { SendTxHelper } from '../../src/utils/send_tx_helper';
 import { getTransactionError } from '../../src/utils/get_transaction_error';
 import { getTransactionGasPricing } from '../../src/utils/get_transaction_gas_pricing';

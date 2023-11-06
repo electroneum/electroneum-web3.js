@@ -14,8 +14,8 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { DEFAULT_RETURN_FORMAT, FMT_BYTES, FMT_NUMBER, Transaction } from 'web3-types';
-import { TransactionDataAndInputError } from 'web3-errors';
+import { DEFAULT_RETURN_FORMAT, FMT_BYTES, FMT_NUMBER, Transaction } from '@etn-sc/web3-types';
+import { TransactionDataAndInputError } from '@etn-sc/web3-errors';
 
 import { formatTransaction } from '../../src/utils/format_transaction';
 import {

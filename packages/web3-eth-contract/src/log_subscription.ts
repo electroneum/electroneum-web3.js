@@ -23,9 +23,9 @@ import {
 	DataFormat,
 	EventLog,
 	ContractAbiWithSignature,
-} from 'web3-types';
-import { Web3RequestManager, Web3Subscription, Web3SubscriptionManager } from 'web3-core';
-import { decodeEventABI } from 'web3-eth';
+} from '@etn-sc/web3-types';
+import { Web3RequestManager, Web3Subscription, Web3SubscriptionManager } from '@etn-sc/web3-core';
+import { decodeEventABI } from '@etn-sc/web3-eth';
 
 /**
  * LogSubscription to be used to subscribe to events logs.

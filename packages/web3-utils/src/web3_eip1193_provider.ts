@@ -22,9 +22,9 @@ import {
 	Web3APIPayload,
 	Web3APISpec,
 	Web3BaseProvider,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 import { EventEmitter } from 'events';
-import { EIP1193ProviderRpcError } from 'web3-errors';
+import { EIP1193ProviderRpcError } from '@etn-sc/web3-errors';
 import { toPayload } from './json_rpc.js';
 
 /**

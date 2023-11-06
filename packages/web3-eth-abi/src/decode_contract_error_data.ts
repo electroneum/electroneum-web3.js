@@ -15,8 +15,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Eip838ExecutionError } from 'web3-errors';
-import { AbiErrorFragment } from 'web3-types';
+import { Eip838ExecutionError } from '@etn-sc/web3-errors';
+import { AbiErrorFragment } from '@etn-sc/web3-types';
 
 import { encodeErrorSignature } from './api/errors_api.js';
 import { decodeParameters } from './api/parameters_api.js';

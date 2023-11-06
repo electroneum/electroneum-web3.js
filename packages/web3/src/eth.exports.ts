@@ -15,11 +15,11 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-export * from 'web3-eth';
+export * from '@etn-sc/web3-eth';
 
-export * as abi from 'web3-eth-abi';
-export * as accounts from 'web3-eth-accounts';
-export * as contract from 'web3-eth-contract';
-export * as ens from 'web3-eth-ens';
-export * as personal from 'web3-eth-personal';
-export * as iban from 'web3-eth-iban';
+export * as abi from '@etn-sc/web3-eth-abi';
+export * as accounts from '@etn-sc/web3-eth-accounts';
+export * as contract from '@etn-sc/web3-eth-contract';
+export * as ens from '@etn-sc/web3-eth-ens';
+export * as personal from '@etn-sc/web3-eth-personal';
+export * as iban from '@etn-sc/web3-eth-iban';

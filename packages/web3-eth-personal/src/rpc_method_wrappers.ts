@@ -14,12 +14,12 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { Web3RequestManager } from 'web3-core';
-import { toChecksumAddress, utf8ToHex } from 'web3-utils';
-import { formatTransaction } from 'web3-eth';
-import { Address, EthPersonalAPI, ETH_DATA_FORMAT, HexString, Transaction } from 'web3-types';
-import { validator, isHexStrict } from 'web3-validator';
-import { personalRpcMethods } from 'web3-rpc-methods';
+import { Web3RequestManager } from '@etn-sc/web3-core';
+import { toChecksumAddress, utf8ToHex } from '@etn-sc/web3-utils';
+import { formatTransaction } from '@etn-sc/web3-eth';
+import { Address, EthPersonalAPI, ETH_DATA_FORMAT, HexString, Transaction } from '@etn-sc/web3-types';
+import { validator, isHexStrict } from '@etn-sc/web3-validator';
+import { personalRpcMethods } from '@etn-sc/web3-rpc-methods';
 
 export const getAccounts = async (requestManager: Web3RequestManager<EthPersonalAPI>) => {
 	const result = await personalRpcMethods.getAccounts(requestManager);

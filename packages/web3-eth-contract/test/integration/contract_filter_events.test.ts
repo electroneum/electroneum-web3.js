@@ -15,8 +15,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { toBigInt } from 'web3-utils';
-import { EventLog } from 'web3-types';
+import { toBigInt } from '@etn-sc/web3-utils';
+import { EventLog } from '@etn-sc/web3-types';
 import { Contract } from '../../src';
 import { ERC20TokenAbi, ERC20TokenBytecode } from '../shared_fixtures/build/ERC20Token';
 import { BasicAbi, BasicBytecode } from '../shared_fixtures/build/Basic';

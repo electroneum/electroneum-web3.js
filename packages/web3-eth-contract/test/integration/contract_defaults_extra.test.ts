@@ -15,9 +15,9 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { ValidChains, Hardfork, TransactionReceipt } from 'web3-types';
-import * as Web3Eth from 'web3-eth';
-import { TransactionBlockTimeoutError } from 'web3-errors';
+import { ValidChains, Hardfork, TransactionReceipt } from '@etn-sc/web3-types';
+import * as Web3Eth from '@etn-sc/web3-eth';
+import { TransactionBlockTimeoutError } from '@etn-sc/web3-errors';
 import { Contract } from '../../src';
 import { GreeterBytecode, GreeterAbi } from '../shared_fixtures/build/Greeter';
 import {

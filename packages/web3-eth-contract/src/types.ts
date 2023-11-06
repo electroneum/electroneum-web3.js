@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Web3ContextInitOptions, Web3PromiEvent } from 'web3-core';
+import { Web3ContextInitOptions, Web3PromiEvent } from '@etn-sc/web3-core';
 import {
 	AccessListResult,
 	BlockNumberOrTag,
@@ -28,13 +28,13 @@ import {
 	DataFormat,
 	DEFAULT_RETURN_FORMAT,
 	FormatType,
-} from 'web3-types';
-import { NewHeadsSubscription, SendTransactionEvents } from 'web3-eth';
+} from '@etn-sc/web3-types';
+import { NewHeadsSubscription, SendTransactionEvents } from '@etn-sc/web3-eth';
 import { LogsSubscription } from './log_subscription.js';
 
 export type NonPayableTxOptions = NonPayableCallOptions;
 export type PayableTxOptions = PayableCallOptions;
-export { ContractAbiWithSignature, EventLog, ContractOptions } from 'web3-types';
+export { ContractAbiWithSignature, EventLog, ContractOptions } from '@etn-sc/web3-types';
 
 export interface ContractEventOptions {
 	/**

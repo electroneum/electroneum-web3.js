@@ -26,8 +26,8 @@ import {
 	Transaction,
 	TransactionWithSenderAPI,
 	ETH_DATA_FORMAT,
-} from 'web3-types';
-import { isAddress, isHexStrict, isHexString32Bytes, isNullish, isUInt } from 'web3-validator';
+} from '@etn-sc/web3-types';
+import { isAddress, isHexStrict, isHexString32Bytes, isNullish, isUInt } from '@etn-sc/web3-validator';
 import {
 	ChainMismatchError,
 	HardforkMismatchError,
@@ -46,7 +46,7 @@ import {
 	MissingGasError,
 	TransactionGasMismatchError,
 	UnsupportedFeeMarketError,
-} from 'web3-errors';
+} from '@etn-sc/web3-errors';
 import { formatTransaction } from './utils/format_transaction.js';
 import { InternalTransaction } from './types.js';
 

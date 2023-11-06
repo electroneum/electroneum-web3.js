@@ -19,7 +19,7 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
  * This is the main (or 'umbrella') class of the web3.js library.
  *
  * ```ts
- * import Web3 from 'web3';
+ * import Web3 from '@etn-sc/web3';
  *
  * > Web3.utils
  * > Web3.version
@@ -67,7 +67,7 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
  * The Web3 class is an umbrella package to house all Ethereum related modules.
  *
  * ```ts
- * import Web3 from 'web3';
+ * import Web3 from '@etn-sc/web3';
  *
  * // "Web3.givenProvider" will be set if in an Ethereum supported browser.
  * const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546');
@@ -165,7 +165,7 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
  *
  * #### Example
  * ```ts
- * import Web3 from 'web3';
+ * import Web3 from '@etn-sc/web3';
  * // use the given Provider or instantiate a new websocket provider
  * let web3 = new Web3(Web3.givenProvider || 'ws://remotenode.com:8546');
  * // or
@@ -331,33 +331,33 @@ export default Web3;
  * Named exports for all objects which are the default-exported-object in their packages
  */
 export { Web3 };
-export { Web3Context, Web3PluginBase, Web3EthPluginBase } from 'web3-core';
-export { Web3Eth } from 'web3-eth';
-export { Contract } from 'web3-eth-contract';
-export { Iban } from 'web3-eth-iban';
-export { Personal } from 'web3-eth-personal';
-export { Net } from 'web3-net';
-export { HttpProvider } from 'web3-providers-http';
-export { WebSocketProvider } from 'web3-providers-ws';
-export { Web3Validator } from 'web3-validator';
+export { Web3Context, Web3PluginBase, Web3EthPluginBase } from '@etn-sc/web3-core';
+export { Web3Eth } from '@etn-sc/web3-eth';
+export { Contract } from '@etn-sc/web3-eth-contract';
+export { Iban } from '@etn-sc/web3-eth-iban';
+export { Personal } from '@etn-sc/web3-eth-personal';
+export { Net } from '@etn-sc/web3-net';
+export { HttpProvider } from '@etn-sc/web3-providers-http';
+export { WebSocketProvider } from '@etn-sc/web3-providers-ws';
+export { Web3Validator } from '@etn-sc/web3-validator';
 
 /**
  * Export all packages grouped by name spaces
  */
-export * as core from 'web3-core';
-export * as errors from 'web3-errors';
+export * as core from '@etn-sc/web3-core';
+export * as errors from '@etn-sc/web3-errors';
 export * as eth from './eth.exports.js';
-export * as net from 'web3-net';
+export * as net from '@etn-sc/web3-net';
 export * as providers from './providers.exports.js';
-export * as rpcMethods from 'web3-rpc-methods';
-export * as types from 'web3-types';
-export * as utils from 'web3-utils';
-export * as validator from 'web3-validator';
+export * as rpcMethods from '@etn-sc/web3-rpc-methods';
+export * as types from '@etn-sc/web3-types';
+export * as utils from '@etn-sc/web3-utils';
+export * as validator from '@etn-sc/web3-validator';
 
 /**
  * Export all types from `web3-types` without a namespace (in addition to being available at `types` namespace).
  * To enable the user to write: `function something(): Web3Api` without the need for `types.Web3Api`.
  * And the same for `web3-errors`. Because this package contains error classes and constants.
  */
-export * from 'web3-errors';
-export * from 'web3-types';
+export * from '@etn-sc/web3-errors';
+export * from '@etn-sc/web3-types';

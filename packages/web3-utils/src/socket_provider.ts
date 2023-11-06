@@ -38,7 +38,7 @@ import {
 	Web3ProviderEventCallback,
 	Web3ProviderMessageEventCallback,
 	Web3ProviderStatus,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 import {
 	ConnectionError,
 	ConnectionNotOpenError,
@@ -47,7 +47,7 @@ import {
 	PendingRequestsOnReconnectingError,
 	RequestAlreadySentError,
 	Web3WSProviderError,
-} from 'web3-errors';
+} from '@etn-sc/web3-errors';
 import { Eip1193Provider } from './web3_eip1193_provider.js';
 import { ChunkResponseParser } from './chunk_response_parser.js';
 import { isNullish } from './validation.js';

@@ -15,11 +15,11 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { ProviderRpcError } from 'web3-types/src/web3_api_types';
+import { ProviderRpcError } from '@etn-sc/web3-types/src/web3_api_types';
 import ganache from 'ganache';
-import { EthExecutionAPI, Web3APIPayload, SocketRequestItem, JsonRpcResponse } from 'web3-types';
-import { InvalidResponseError, ConnectionNotOpenError } from 'web3-errors';
-import { Web3DeferredPromise } from 'web3-utils';
+import { EthExecutionAPI, Web3APIPayload, SocketRequestItem, JsonRpcResponse } from '@etn-sc/web3-types';
+import { InvalidResponseError, ConnectionNotOpenError } from '@etn-sc/web3-errors';
+import { Web3DeferredPromise } from '@etn-sc/web3-utils';
 import {
 	waitForSocketConnect,
 	waitForEvent,

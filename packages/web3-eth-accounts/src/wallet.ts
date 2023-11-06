@@ -15,8 +15,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Web3BaseWallet, Web3BaseWalletAccount, KeyStore } from 'web3-types';
-import { isNullish } from 'web3-validator';
+import { Web3BaseWallet, Web3BaseWalletAccount, KeyStore } from '@etn-sc/web3-types';
+import { isNullish } from '@etn-sc/web3-validator';
 import { WebStorage } from './types.js';
 
 type BrowserError = { code: number; name: string };
@@ -29,7 +29,7 @@ type BrowserError = { code: number; name: string };
  *  Web3AccountProvider - AccountProvider for the wallet
  *
  * ```ts
- * import Web3 from 'web3';
+ * import Web3 from '@etn-sc/web3';
  * const web3 = new Web3("https://localhost:8454")
  * web3.eth.accounts.wallet
  * > Wallet(0) [

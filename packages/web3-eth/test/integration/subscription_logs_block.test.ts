@@ -14,13 +14,13 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import WebSocketProvider from 'web3-providers-ws';
+import WebSocketProvider from '@etn-sc/web3-providers-ws';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Contract, decodeEventABI } from 'web3-eth-contract';
-import { AbiEventFragment, Web3BaseProvider } from 'web3-types';
-import { numberToHex } from 'web3-utils';
+import { Contract, decodeEventABI } from '@etn-sc/web3-eth-contract';
+import { AbiEventFragment, Web3BaseProvider } from '@etn-sc/web3-types';
+import { numberToHex } from '@etn-sc/web3-utils';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { IpcProvider } from 'web3-providers-ipc';
+import { IpcProvider } from '@etn-sc/web3-providers-ipc';
 import { Web3Eth } from '../../src';
 import { LogsSubscription } from '../../src/web3_subscriptions';
 import {

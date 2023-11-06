@@ -16,8 +16,8 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 // TODO For some reason when running this test with a WebSocket provider
 // the test takes a long time to run afterAll
-import Web3 from 'web3';
-import { validator } from 'web3-validator';
+import Web3 from '@etn-sc/web3';
+import { validator } from '@etn-sc/web3-validator';
 import {
 	closeOpenConnection,
 	getSystemTestProvider,

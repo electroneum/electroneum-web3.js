@@ -15,18 +15,18 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { EthExecutionAPI } from 'web3-types';
-import { Web3Context } from 'web3-core';
-import HttpProvider from 'web3-providers-http';
-import { isNullish } from 'web3-validator';
+import { EthExecutionAPI } from '@etn-sc/web3-types';
+import { Web3Context } from '@etn-sc/web3-core';
+import HttpProvider from '@etn-sc/web3-providers-http';
+import { isNullish } from '@etn-sc/web3-validator';
 import {
 	AccessListEIP2930Transaction,
 	FeeMarketEIP1559Transaction,
 	Transaction,
-} from 'web3-eth-accounts';
-import { ethRpcMethods } from 'web3-rpc-methods';
+} from '@etn-sc/web3-eth-accounts';
+import { ethRpcMethods } from '@etn-sc/web3-rpc-methods';
 
-import { bytesToHex, hexToBytes } from 'web3-utils';
+import { bytesToHex, hexToBytes } from '@etn-sc/web3-utils';
 import { prepareTransactionForSigning } from '../../src/utils/prepare_transaction_for_signing';
 import { validTransactions } from '../fixtures/prepare_transaction_for_signing';
 

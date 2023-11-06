@@ -14,9 +14,9 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { BlockHeaderOutput, SupportedProviders } from 'web3-types';
+import { BlockHeaderOutput, SupportedProviders } from '@etn-sc/web3-types';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Web3 } from 'web3';
+import { Web3 } from '@etn-sc/web3';
 import { Web3Eth, NewHeadsSubscription } from '../../src';
 import { Resolve } from './helper';
 import {

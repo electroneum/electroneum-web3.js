@@ -25,9 +25,9 @@ import {
 	Log,
 	Web3APISpec,
 	Web3BaseProvider,
-} from 'web3-types';
-import { ProviderError, SubscriptionError } from 'web3-errors';
-import { isNullish } from 'web3-utils';
+} from '@etn-sc/web3-types';
+import { ProviderError, SubscriptionError } from '@etn-sc/web3-errors';
+import { isNullish } from '@etn-sc/web3-utils';
 import { isSupportSubscriptions } from './utils.js';
 import { Web3RequestManager, Web3RequestManagerEvent } from './web3_request_manager.js';
 // eslint-disable-next-line import/no-cycle

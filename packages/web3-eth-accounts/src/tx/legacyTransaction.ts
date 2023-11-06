@@ -16,8 +16,8 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 import { RLP } from '@ethereumjs/rlp';
 import { keccak256 } from 'ethereum-cryptography/keccak.js';
-import { bytesToHex } from 'web3-utils';
-import { validateNoLeadingZeroes } from 'web3-validator';
+import { bytesToHex } from '@etn-sc/web3-utils';
+import { validateNoLeadingZeroes } from '@etn-sc/web3-validator';
 import {
 	bigIntToHex,
 	bigIntToUnpaddedUint8Array,

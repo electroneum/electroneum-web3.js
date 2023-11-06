@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Web3WSProviderError } from 'web3-errors';
+import { Web3WSProviderError } from '@etn-sc/web3-errors';
 import {
 	EthExecutionAPI,
 	JsonRpcId,
@@ -25,8 +25,8 @@ import {
 	ProviderRpcError,
 	SocketRequestItem,
 	Web3APIPayload,
-} from 'web3-types';
-import { Web3DeferredPromise } from 'web3-utils';
+} from '@etn-sc/web3-types';
+import { Web3DeferredPromise } from '@etn-sc/web3-utils';
 import WebSocketProvider from '../../src/index';
 import {
 	createTempAccount,

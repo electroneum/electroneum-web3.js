@@ -15,10 +15,10 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import * as eth from 'web3-eth';
-import { ValidChains, Hardfork, AccessListResult, Address, ETH_DATA_FORMAT } from 'web3-types';
-import { Web3ContractError } from 'web3-errors';
-import { Web3Context } from 'web3-core';
+import * as eth from '@etn-sc/web3-eth';
+import { ValidChains, Hardfork, AccessListResult, Address, ETH_DATA_FORMAT } from '@etn-sc/web3-types';
+import { Web3ContractError } from '@etn-sc/web3-errors';
+import { Web3Context } from '@etn-sc/web3-core';
 
 import { Contract } from '../../src';
 import { sampleStorageContractABI } from '../fixtures/storage';

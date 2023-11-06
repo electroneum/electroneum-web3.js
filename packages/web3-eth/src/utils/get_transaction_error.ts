@@ -15,19 +15,19 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { Web3Context } from 'web3-core';
+import { Web3Context } from '@etn-sc/web3-core';
 import {
 	TransactionRevertedWithoutReasonError,
 	TransactionRevertInstructionError,
 	TransactionRevertWithCustomError,
-} from 'web3-errors';
+} from '@etn-sc/web3-errors';
 import {
 	DataFormat,
 	FormatType,
 	ContractAbi,
 	TransactionCall,
 	TransactionReceipt,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 import { RevertReason, RevertReasonWithCustomError } from '../types.js';
 // eslint-disable-next-line import/no-cycle
 import { getRevertReason, parseTransactionError } from './get_revert_reason.js';

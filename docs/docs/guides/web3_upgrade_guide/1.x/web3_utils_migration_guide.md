@@ -11,10 +11,10 @@ To make use you only import the utility functions which are needed by your app. 
 
 ```ts
 // 1.x
-import web3Utils from 'web3-utils';
+import web3Utils from '@etn-sc/web3-utils';
 
 // 4.x
-import * as web3Utils from 'web3-utils';
+import * as web3Utils from '@etn-sc/web3-utils';
 ```
 
 ## Unit conversion functions

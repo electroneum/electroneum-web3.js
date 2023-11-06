@@ -21,7 +21,7 @@ import {
 	TransactionRevertInstructionError,
 	TransactionRevertWithCustomError,
 	InvalidResponseError,
-} from 'web3-errors';
+} from '@etn-sc/web3-errors';
 import {
 	FormatType,
 	ETH_DATA_FORMAT,
@@ -32,7 +32,7 @@ import {
 	Numbers,
 	Transaction,
 	TransactionReceipt,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 
 export type InternalTransaction = FormatType<Transaction, typeof ETH_DATA_FORMAT>;
 

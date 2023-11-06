@@ -21,17 +21,17 @@ import {
 	Transaction,
 	ValidChains,
 	Hardfork,
-} from 'web3-types';
-import { Web3Context } from 'web3-core';
-import HttpProvider from 'web3-providers-http';
-import { isNullish } from 'web3-validator';
-import { ethRpcMethods } from 'web3-rpc-methods';
+} from '@etn-sc/web3-types';
+import { Web3Context } from '@etn-sc/web3-core';
+import HttpProvider from '@etn-sc/web3-providers-http';
+import { isNullish } from '@etn-sc/web3-validator';
+import { ethRpcMethods } from '@etn-sc/web3-rpc-methods';
 import {
 	Eip1559NotSupportedError,
 	TransactionDataAndInputError,
 	UnableToPopulateNonceError,
 	UnsupportedTransactionTypeError,
-} from 'web3-errors';
+} from '@etn-sc/web3-errors';
 import { defaultTransactionBuilder } from '../../src/utils/transaction_builder';
 
 jest.mock('web3-rpc-methods');

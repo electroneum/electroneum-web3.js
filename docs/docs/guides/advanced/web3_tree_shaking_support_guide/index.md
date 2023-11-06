@@ -31,13 +31,13 @@ For further information about `sideEffects` see [webpack docs](https://webpack.j
     For example, if you need `web.eth`:
 
 ```ts
-import Web3Eth from 'web3-eth';
+import Web3Eth from '@etn-sc/web3-eth';
 ```
 
 If you only need a few functions from `web3-utils`:
 
 ```ts
-import { numberToHex, hexToNumber } from 'web3-utils';
+import { numberToHex, hexToNumber } from '@etn-sc/web3-utils';
 ```
 
 You can find an example app with tree shaking [here](https://github.com/ChainSafe/web3js-example-react-app).

@@ -14,10 +14,10 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { validator } from 'web3-validator';
-import { blockSchema } from 'web3-eth';
-import { Block, Transaction } from 'web3-types';
-import { format as formatter } from 'web3-utils';
+import { validator } from '@etn-sc/web3-validator';
+import { blockSchema } from '@etn-sc/web3-eth';
+import { Block, Transaction } from '@etn-sc/web3-types';
+import { format as formatter } from '@etn-sc/web3-utils';
 
 import Web3, { FMT_BYTES, FMT_NUMBER } from '../../src';
 import { getSystemE2ETestProvider } from './e2e_utils';

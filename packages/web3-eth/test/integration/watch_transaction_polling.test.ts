@@ -14,9 +14,9 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-import { DEFAULT_RETURN_FORMAT } from 'web3-types';
-import { Web3PromiEvent } from 'web3-core';
-import { SupportedProviders, TransactionReceipt } from 'web3-types';
+import { DEFAULT_RETURN_FORMAT } from '@etn-sc/web3-types';
+import { Web3PromiEvent } from '@etn-sc/web3-core';
+import { SupportedProviders, TransactionReceipt } from '@etn-sc/web3-types';
 import { Web3Eth, SendTransactionEvents } from '../../src';
 
 import {

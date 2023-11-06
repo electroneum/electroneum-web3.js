@@ -21,13 +21,13 @@ import {
 	Web3PromiEvent,
 	Web3ConfigEvent,
 	Web3SubscriptionManager,
-} from 'web3-core';
+} from '@etn-sc/web3-core';
 import {
 	ContractExecutionError,
 	ContractTransactionDataAndInputError,
 	SubscriptionError,
 	Web3ContractError,
-} from 'web3-errors';
+} from '@etn-sc/web3-errors';
 import {
 	createAccessList,
 	call,
@@ -39,7 +39,7 @@ import {
 	ALL_EVENTS,
 	ALL_EVENTS_ABI,
 	SendTransactionEvents,
-} from 'web3-eth';
+} from '@etn-sc/web3-eth';
 import {
 	encodeEventSignature,
 	encodeFunctionSignature,
@@ -48,7 +48,7 @@ import {
 	isAbiEventFragment,
 	isAbiFunctionFragment,
 	jsonInterfaceMethodToString,
-} from 'web3-eth-abi';
+} from '@etn-sc/web3-eth-abi';
 import {
 	AbiConstructorFragment,
 	AbiErrorFragment,
@@ -82,15 +82,15 @@ import {
 	EventLog,
 	ContractAbiWithSignature,
 	ContractOptions,
-} from 'web3-types';
-import { format, isDataFormat, keccak256, toChecksumAddress } from 'web3-utils';
+} from '@etn-sc/web3-types';
+import { format, isDataFormat, keccak256, toChecksumAddress } from '@etn-sc/web3-utils';
 import {
 	isNullish,
 	validator,
 	utils as validatorUtils,
 	ValidationSchemaInput,
 	Web3ValidatorError,
-} from 'web3-validator';
+} from '@etn-sc/web3-validator';
 import { decodeMethodReturn, encodeEventABI, encodeMethodABI } from './encoding.js';
 import { LogsSubscription } from './log_subscription.js';
 import {

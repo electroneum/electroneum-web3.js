@@ -15,8 +15,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { FormatterError } from 'web3-errors';
-import { Iban } from 'web3-eth-iban';
+import { FormatterError } from '@etn-sc/web3-errors';
+import { Iban } from '@etn-sc/web3-eth-iban';
 import {
 	BlockTags,
 	Filter,
@@ -36,7 +36,7 @@ import {
 	SyncOutput,
 	TransactionInput,
 	TransactionOutput,
-} from 'web3-types';
+} from '@etn-sc/web3-types';
 import {
 	fromUtf8,
 	hexToNumber,
@@ -50,8 +50,8 @@ import {
 	toNumber,
 	toUtf8,
 	utf8ToHex,
-} from 'web3-utils';
-import { isBlockTag, isHex, isNullish } from 'web3-validator';
+} from '@etn-sc/web3-utils';
+import { isBlockTag, isHex, isNullish } from '@etn-sc/web3-validator';
 
 /* eslint-disable deprecation/deprecation */
 /**

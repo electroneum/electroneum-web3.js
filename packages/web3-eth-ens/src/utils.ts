@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import { sha3Raw } from 'web3-utils';
+import { sha3Raw } from '@etn-sc/web3-utils';
 // eslint-disable-next-line camelcase
 import { ens_normalize } from '@adraffy/ens-normalize';
 

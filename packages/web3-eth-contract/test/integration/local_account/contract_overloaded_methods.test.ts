@@ -16,11 +16,11 @@ along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import Web3 from 'web3';
+import Web3 from '@etn-sc/web3';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Web3Account } from 'web3-eth-accounts';
-import { utf8ToHex } from 'web3-utils';
-import { EventLog } from 'web3-types';
+import { Web3Account } from '@etn-sc/web3-eth-accounts';
+import { utf8ToHex } from '@etn-sc/web3-utils';
+import { EventLog } from '@etn-sc/web3-types';
 import { Contract } from '../../../src';
 import { ERC721TokenAbi, ERC721TokenBytecode } from '../../shared_fixtures/build/ERC721Token';
 import { getSystemTestProvider, createLocalAccount } from '../../fixtures/system_test_utils';

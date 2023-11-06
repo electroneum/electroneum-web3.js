@@ -15,11 +15,11 @@ You should have received a copy of the GNU Lesser General Public License
 along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import Contract from 'web3-eth-contract';
-import HttpProvider from 'web3-providers-http';
-import { IpcProvider } from 'web3-providers-ipc';
-import WebSocketProvider from 'web3-providers-ws';
-import { JsonRpcOptionalRequest, SupportedProviders, Web3BaseProvider } from 'web3-types';
+import Contract from '@etn-sc/web3-eth-contract';
+import HttpProvider from '@etn-sc/web3-providers-http';
+import { IpcProvider } from '@etn-sc/web3-providers-ipc';
+import WebSocketProvider from '@etn-sc/web3-providers-ws';
+import { JsonRpcOptionalRequest, SupportedProviders, Web3BaseProvider } from '@etn-sc/web3-types';
 import { Web3 } from '../../src/index';
 import { BasicAbi } from '../shared_fixtures/Basic';
 import { GreeterAbi } from '../shared_fixtures/build/Greeter';
