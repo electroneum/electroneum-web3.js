@@ -9,29 +9,23 @@
 [![NPM Package][npm-image]][npm-url]
 [![Downloads][downloads-image]][npm-url]
 
-This is a sub-package of [web3.js][repo].
+This is a sub-package of [electroneum-web3.js][repo].
 
 `web3-eth-accounts` contains functionality for managing Ethereum accounts and signing.
 
 ## Installation
 
-You can install the package either using [NPM](https://www.npmjs.com/package/web3-eth-accounts) or using [Yarn](https://yarnpkg.com/package/web3-eth-accounts)
+You can install the package either using [NPM](https://www.npmjs.com/package/@etn-sc/web3-eth-accounts)
 
 ### Using NPM
 
 ```bash
-npm install web3-eth-accounts
-```
-
-### Using Yarn
-
-```bash
-yarn add web3-eth-accounts
+npm install @etn-sc/web3-eth-accounts
 ```
 
 ## Getting Started
 
--   :writing_hand: If you have questions [submit an issue](https://github.com/ChainSafe/web3.js/issues/new) or join us on [Discord](https://discord.gg/yjyvFRP)
+-   :writing_hand: If you have questions [submit an issue](https://github.com/electroneum/electroneum-web3.js/issues/new) or join us on [Discord](https://discord.gg/yjyvFRP)
     ![Discord](https://img.shields.io/discord/593655374469660673.svg?label=Discord&logo=discord)
 
 ## Prerequisites
@@ -53,7 +47,7 @@ yarn add web3-eth-accounts
 | test:unit        | Uses `jest` to run tests under `/test/unit`        |
 
 [docs]: https://docs.web3js.org/
-[repo]: https://github.com/web3/web3.js/tree/4.x/packages/web3-eth-accounts
+[repo]: https://github.com/electroneum/electroneum-web3.js/tree/4.x/packages/web3-eth-accounts
 [npm-image]: https://img.shields.io/github/package-json/v/web3/web3.js/4.x?filename=packages%2Fweb3-eth-accounts%2Fpackage.json
-[npm-url]: https://npmjs.org/package/web3-eth-accounts
+[npm-url]: https://npmjs.org/package/@etn-sc/web3-eth-accounts
 [downloads-image]: https://img.shields.io/npm/dm/web3-eth-accounts?label=npm%20downloads
