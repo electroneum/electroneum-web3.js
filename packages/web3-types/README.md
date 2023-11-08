@@ -47,6 +47,6 @@ npm install @etn-sc/web3-types
 
 [docs]: https://docs.web3js.org/
 [repo]: https://github.com/electroneum/electroneum-web3.js/tree/4.x/packages/web3-types
-[npm-image]: https://img.shields.io/github/package-json/v/web3/web3.js/4.x?filename=packages%2Fweb3-types%2Fpackage.json
+[npm-image]: https://img.shields.io/github/package-json/v/electroneum/electroneum-web3.js/4.x?filename=packages%2Fweb3-types%2Fpackage.json
 [npm-url]: https://npmjs.org/package/@etn-sc/web3-types
-[downloads-image]: https://img.shields.io/npm/dm/web3-types?label=npm%20downloads
+[downloads-image]: https://img.shields.io/npm/dm/@etn-sc/web3-types?label=npm%20downloads

@@ -96,7 +96,7 @@ const config = {
 					routeBasePath: '/', // Serve the docs at the site's root
 					// Please change this to your repo.
 					// Remove this to remove the "edit this page" links.
-					editUrl: 'https://github.com/web3/web3.js/tree/4.x/docs',
+					editUrl: 'https://github.com/electroneum/electroneum-web3.js/tree/4.x/docs',
 				},
 				theme: {
 					customCss: require.resolve('./src/css/custom.css'),
@@ -132,7 +132,7 @@ const config = {
 						position: 'left',
 					},
 					{
-						href: 'https://github.com/ChainSafe/web3.js/tree/4.x/',
+						href: 'https://github.com/electroneum/electroneum-web3.js/tree/4.x/',
 						label: 'GitHub',
 						position: 'right',
 					},

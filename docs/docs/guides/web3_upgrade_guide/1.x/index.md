@@ -15,7 +15,7 @@ This upgrade guide is for upgrading from web3.js 1.x to web3.js 4.x.
 
 ```ts
 // This will return the name space and the line after it will throw an error!
-const Web3 = require('web3');
+const Web3 = require('@etn-sc/web3');
 
 const web3 = new Web3();
 ```
@@ -23,7 +23,7 @@ const web3 = new Web3();
 And the correct usage now is:
 
 ```ts
-const { Web3 } = require('web3');
+const { Web3 } = require('@etn-sc/web3');
 
 const web3 = new Web3();
 ```

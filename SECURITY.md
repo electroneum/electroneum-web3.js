@@ -10,7 +10,7 @@ Current-implementation `v4.x`:
 
 -   :hourglass: Web3.js has undergone a complete refactoring and rewrite.
 -   :stop_sign: We encourage **not** using these releases until official stable releases will be announced.
--   :globe_with_meridians: We encourage using the [most recently released version](https://github.com/ChainSafe/web3.js/releases/latest) from the `v1.x` release track before reporting an issue.
+-   :globe_with_meridians: We encourage using the [most recently released version](https://github.com/electroneum/electroneum-web3.js/releases/latest) from the `v1.x` release track before reporting an issue.
 
 ## Reporting a Vulnerability
 

@@ -1,26 +1,29 @@
 {
 	"name": "eslint-config-base-web3",
 	"version": "0.1.0",
-	"description": "Base eslint config for Web3 project.",
-	"author": "ChainSafe Systems",
+	"description": "Base eslint config for @etn-sc/web3 project.",
+	"author": "Electroneum & ChainSafe Systems",
 	"private": true,
 	"license": "LGPL-3.0",
 	"keywords": [
 		"eslint",
 		"ethereum",
 		"eth",
+		"electroneum",
+		"etn",
+		"etn-sc",
 		"web3",
 		"web3js",
 		"web3.js",
 		"blockchain"
 	],
-	"homepage": "https://github.com/ChainSafe/web3.js#readme",
+	"homepage": "https://github.com/electroneum/electroneum-web3.js#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/ChainSafe/web3.js.git"
+		"url": "git+https://github.com/electroneum/electroneum-web3.js.git"
 	},
 	"bugs": {
-		"url": "https://github.com/ChainSafe/web3.js/issues"
+		"url": "https://github.com/electroneum/electroneum-web3.js/issues"
 	},
 	"engines": {
 		"node": ">=12",
