@@ -11,7 +11,7 @@ This upgrade guide is for upgrading from web3.js 1.x to web3.js 4.x.
 
 ### The `web3` package will return all web3.js exported objects
 
-`require('web3')` will now return all web3 exported-objects organized in namespaces (and few are available on top level). So, it is no longer supported to write the following code:
+`require('@etn-sc/web3')` will now return all web3 exported-objects organized in namespaces (and few are available on top level). So, it is no longer supported to write the following code:
 
 ```ts
 // This will return the name space and the line after it will throw an error!
@@ -166,7 +166,7 @@ web3.extend({
 });
 
 // in 4.0.4+
-declare module 'web3' {
+declare module '@etn-sc/web3' {
 	interface Web3Context {
 		myModule: {
 			getBalance(address: Address, blockTag: BlockTag): Promise<bigint>;

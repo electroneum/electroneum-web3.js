@@ -33,8 +33,8 @@ If the provided IBAN was not a Direct one, an error will be thrown which contain
 
 ##### In version 1.x
 
-If the provided IBAN was not a valid Ethereum Address, an error used be thrown which contains the message `'Provided address is not a valid address: '+ address`.
+If the provided IBAN was not a valid Electroneum SmartChain Address, an error used be thrown which contains the message `'Provided address is not a valid address: '+ address`.
 
 ##### In version 4.x
 
-If the provided IBAN was not a valid Ethereum Address, an error object will be thrown which contains the message: `'Invalid value given "${address}". Error: 'invalid ethereum address'` and the code `1005`.
+If the provided IBAN was not a valid Electroneum SmartChain Address, an error object will be thrown which contains the message: `'Invalid value given "${address}". Error: 'invalid Electroneum SmartChain address'` and the code `1005`.

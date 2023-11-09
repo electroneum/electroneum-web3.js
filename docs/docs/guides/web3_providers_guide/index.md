@@ -7,7 +7,7 @@ sidebar_label: 'Providers'
 
 ## Introduction
 
-web3.js providers are objects responsible for enabling connectivity with the Ethereum network in various ways. Connecting your web application to an Ethereum node is necessary for sending transactions, querying data, and interacting with smart contracts on the network. In this guide, we will explore the different types of providers available in web3.js, how to set them up, and how to use them in your code.
+web3.js providers are objects responsible for enabling connectivity with the Electroneum SmartChain network in various ways. Connecting your web application to an Electroneum SmartChain node is necessary for sending transactions, querying data, and interacting with smart contracts on the network. In this guide, we will explore the different types of providers available in web3.js, how to set them up, and how to use them in your code.
 
 Connecting to a chain happens through a provider. You can pass the provider to the constructor as in the following example:
 
@@ -62,7 +62,7 @@ The key rule for setting provider is as follows:
 
 ## Examples
 
-### Local Geth Node
+### Local Etn-sc Node
 
 ```ts
 const { Web3 } = require('@etn-sc/web3');
@@ -77,13 +77,13 @@ web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:8546'));
 
 // Using the IPC provider in node.js
 const net = require('net');
-const web3 = new Web3('/Users/myuser/Library/Ethereum/geth.ipc', net); // mac os path
+const web3 = new Web3('/Users/myuser/Library/Electroneum-sc/etn-sc.ipc', net); // mac os path
 // or
 const web3 = new Web3(
-	new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/geth.ipc', net),
+	new Web3.providers.IpcProvider('/Users/myuser/Library/Electroneum-sc/etn-sc.ipc', net),
 ); // mac os path
-// on windows the path is: "\\\\.\\pipe\\geth.ipc"
-// on linux the path is: "/users/myuser/.ethereum/geth.ipc"
+// on windows the path is: "\\\\.\\pipe\\etn-sc.ipc"
+// on linux the path is: "/users/myuser/.electroneum-sc/etn-sc.ipc"
 ```
 
 ### Remote Node Provider
@@ -101,12 +101,12 @@ As stated above, the injected provider should be in compliance with [EIP-1193](h
 The web3.js 4.x Provider specifications are defined in [web3 base provider](https://github.com/electroneum/electroneum-web3.js/blob/4.x/packages/web3-types/src/web3_base_provider.ts) for Injected Providers.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@etn-sc/web3/lib/commonjs/web3.js"></script>
 <script>
 	window.addEventListener('load', function () {
 		// Check if web3 is available
 		if (typeof window.ethereum !== 'undefined') {
-			// Use the browser injected Ethereum provider
+			// Use the browser injected Electroneum SmartChain provider
 			web3 = new Web3(window.ethereum);
 			// Request access to the user's MetaMask account
 			window.ethereum.enable();
@@ -119,7 +119,7 @@ The web3.js 4.x Provider specifications are defined in [web3 base provider](http
 		} else {
 			// If web3 is not available, give instructions to install MetaMask
 			document.getElementById('log').innerHTML =
-				'Please install MetaMask to connect with the Ethereum network';
+				'Please install MetaMask to connect with the Electroneum SmartChain network';
 		}
 	});
 </script>

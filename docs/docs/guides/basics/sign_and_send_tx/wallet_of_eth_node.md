@@ -5,7 +5,7 @@ sidebar_label: 'Node Wallet'
 
 # Using Node Wallet
 
-If Ethereum node has unlocked account in its wallet you can send transaction without need of signing locally in web3.js
+If Electroneum SmartChain node has unlocked account in its wallet you can send transaction without need of signing locally in web3.js
 
 ## Transaction
 
@@ -14,7 +14,7 @@ If Ethereum node has unlocked account in its wallet you can send transaction wit
 import Web3 from '@etn-sc/web3';
 const web3 = new Web3(/* PROVIDER*/);
 
-// Second step: add an account to the Ethereum node and unlock it
+// Second step: add an account to the Electroneum SmartChain node and unlock it
 const account = {
 	privateKey: '0xb45b02f408a0dd0996aab2b55a54f4ed7735f82b133c0786a9ff372ffaaf11bd',
 	address: '0xe4beef667408b99053dc147ed19592ada0d77f59',
@@ -22,7 +22,7 @@ const account = {
 
 // if you use ganache backend, use a private key with 0x
 await web3.eth.personal.importRawKey(account.privateKey);
-// if you use geth backend, use a private key without 0x
+// if you use etn-sc backend, use a private key without 0x
 await web3.eth.personal.importRawKey(account.privateKey.slice(2));
 
 // unlock account
@@ -57,7 +57,7 @@ List of references:
 import Web3 from '@etn-sc/web3';
 const web3 = new Web3(/* PROVIDER*/);
 
-// Second step: add an account to the Ethereum node and unlock it
+// Second step: add an account to the Electroneum SmartChain node and unlock it
 const account = {
 	privateKey: '0xb45b02f408a0dd0996aab2b55a54f4ed7735f82b133c0786a9ff372ffaaf11bd',
 	address: '0xe4beef667408b99053dc147ed19592ada0d77f59',
@@ -65,7 +65,7 @@ const account = {
 
 // if you use ganache backend, use a private key with 0x
 await web3.eth.personal.importRawKey(account.privateKey);
-// if you use geth backend, use a private key without 0x
+// if you use etn-sc backend, use a private key without 0x
 await web3.eth.personal.importRawKey(account.privateKey.slice(2));
 
 // unlock account

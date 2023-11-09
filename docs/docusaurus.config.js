@@ -20,29 +20,29 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const { join } = require('path');
 
 const packages = [
-	'web3',
-	'web3-eth',
-	'web3-eth-contract',
-	'web3-utils',
-	'web3-validator',
-	'web3-types',
-	'web3-core',
-	'web3-errors',
-	'web3-net',
-	'web3-eth-abi',
-	'web3-eth-accounts',
-	'web3-eth-ens',
-	'web3-eth-iban',
-	'web3-eth-personal',
-	'web3-providers-http',
-	'web3-providers-ws',
-	'web3-providers-ipc',
+	'@etn-sc/web3',
+	'@etn-sc/web3-eth',
+	'@etn-sc/web3-eth-contract',
+	'@etn-sc/web3-utils',
+	'@etn-sc/web3-validator',
+	'@etn-sc/web3-types',
+	'@etn-sc/web3-core',
+	'@etn-sc/web3-errors',
+	'@etn-sc/web3-net',
+	'@etn-sc/web3-eth-abi',
+	'@etn-sc/web3-eth-accounts',
+	'@etn-sc/web3-eth-ens',
+	'@etn-sc/web3-eth-iban',
+	'@etn-sc/web3-eth-personal',
+	'@etn-sc/web3-providers-http',
+	'@etn-sc/web3-providers-ws',
+	'@etn-sc/web3-providers-ipc',
 ];
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	title: 'web3.js',
-	tagline: 'The ultimate JavaScript library for Ethereum',
+	title: 'etn-sc web3.js',
+	tagline: 'The ultimate JavaScript library for Electroneum SmartChain',
 	url: 'https://docs.web3js.org',
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
@@ -52,7 +52,7 @@ const config = {
 	// GitHub pages deployment config.
 	// If you aren't using GitHub pages, you don't need these.
 	organizationName: 'ChainSafe', // Usually your GitHub org/user name.
-	projectName: 'web3.js', // Usually your repo name.
+	projectName: 'electroneum-web3.js', // Usually your repo name.
 
 	// Even if you don't use internalization, you can use this field to set useful
 	// metadata like html lang. For example, if your site is Chinese, you may want
@@ -109,7 +109,7 @@ const config = {
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
 			navbar: {
-				title: 'Web3.js Docs',
+				title: 'etn-sc Web3.js Docs',
 				logo: {
 					src: 'img/web3js.svg',
 				},
@@ -136,11 +136,6 @@ const config = {
 						label: 'GitHub',
 						position: 'right',
 					},
-					{
-						href: 'https://web3js.org/#/',
-						label: 'Web3js.org',
-						position: 'right',
-					},
 				],
 			},
 			footer: {
@@ -160,7 +155,7 @@ const config = {
 						],
 					},
 				],
-				copyright: `Copyright © ${new Date().getFullYear()} Web3.js . Built with Docusaurus.`,
+				copyright: `Copyright © ${new Date().getFullYear()} @etn-sc/Web3.js . Built with Docusaurus.`,
 			},
 			prism: {
 				theme: lightCodeTheme,

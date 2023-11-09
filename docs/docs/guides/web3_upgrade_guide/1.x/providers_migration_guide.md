@@ -237,7 +237,7 @@ In 1.x, it used to accept the path and an instance of net.Server as in the follo
 ```ts
 import * as net from 'net';
 
-const ipcProvider = new IpcProvider('/Users/myuser/Library/Ethereum/geth.ipc', new net.Server());
+const ipcProvider = new IpcProvider('/Users/myuser/Library/Electroneum-sc/etn-sc.ipc', new net.Server());
 ```
 
 In 4.x, it's no longer installed by default as its nodejs modules are impacting web3.js browser usage.
@@ -247,7 +247,7 @@ you can pass it on to the Web3 instance.
 ```ts
 import { IpcProvider } from '@etn-sc/web3-providers-ipc';
 
-const ipcProvider = new IpcProvider('/Users/myuser/Library/Ethereum/geth.ipc');
+const ipcProvider = new IpcProvider('/Users/myuser/Library/Electroneum-sc/etn-sc.ipc');
 ```
 
 It accepts a second parameter called `socketOptions`. And, its type is `SocketConstructorOpts`. See [here](https://microsoft.github.io/PowerBI-JavaScript/interfaces/_node_modules__types_node_net_d_._net_.socketconstructoropts.html) for full details. And here is its interface:
@@ -281,9 +281,9 @@ Below is an example for the passed options for each version:
 // in 1.x
 var net = require('net');
 
-new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/geth.ipc', net); // mac os path
-// on windows the path is: "\\\\.\\pipe\\geth.ipc"
-// on linux the path is: "/users/myuser/.ethereum/geth.ipc"
+new Web3.providers.IpcProvider('/Users/myuser/Library/Electroneum-sc/etn-sc.ipc', net); // mac os path
+// on windows the path is: "\\\\.\\pipe\\etn-sc.ipc"
+// on linux the path is: "/users/myuser/.electroneum-sc/etn-sc.ipc"
 
 // in 4.x
 let clientOptions: SocketConstructorOpts = {

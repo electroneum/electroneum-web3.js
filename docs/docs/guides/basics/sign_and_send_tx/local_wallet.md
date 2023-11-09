@@ -7,7 +7,7 @@ sidebar_label: 'Local wallet'
 
 The simplest way to sign and send transactions is using a local wallet:
 
-## Ethereum Transaction
+## Electroneum SmartChain Transaction
 
 ```ts
 // First step: initialize `web3` instance
